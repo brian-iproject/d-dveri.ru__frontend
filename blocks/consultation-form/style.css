@@ -1,0 +1,102 @@
+.consultation-form {
+}
+	
+	.consultation-form__item {
+	}
+	
+		.consultation-form__item + .consultation-form__item {
+			margin-top: 19px;
+		}
+		
+		.consultation-form__item--privacy-policy {
+			font-size: 10px;
+			line-height: 1;
+		}
+
+		.consultation-form__field-text {
+			background: rgba(255, 255, 255, .75);
+			border: none;
+			box-shadow: inset 0 0 3px #000;
+			font-family: inherit;
+			font-size: 16px;
+			padding: 19px 22px;
+			width: 100%;
+		}
+		
+		.consultation-form__button {
+			background: var(--color-primary);
+			border: none;
+			box-shadow: 0 4px 14px rgba(0, 0, 0, 0.52);
+			color: #fff;
+			cursor: pointer;
+			font-family: inherit;
+			font-size: 16px;
+			font-weight: 700;
+			padding: 19px 22px;
+			text-align: center;
+			text-transform: uppercase;
+			transition: var(--transition);
+			width: 100%;
+		}
+		
+			.consultation-form__button:hover {
+				transform: scale(1.05);
+			}
+			
+		.order-consultation__checkbox {
+			-webkit-appearance: none;
+			background: none;
+			border: none;
+			height: 15px;
+			margin-right: 6px;
+			position: relative;
+			vertical-align: middle;
+			width: 15px;
+		}
+		
+			.order-consultation__checkbox:before {
+				background: #fff;
+				border: 1px solid var(--color-secondary);
+				border-radius: 4px;
+				content: '';
+				height: 100%;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 100%;
+			}
+
+			.order-consultation__checkbox:checked:after {
+				border-bottom: 2px solid var(--color-secondary);
+				border-left: 2px solid var(--color-secondary);
+				content: "";
+				height: 5px;
+				margin: 4px 0 0 3px;
+				position: absolute;
+				transform: rotate(-45deg);
+				width: 9px;
+			}
+			
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1200px) {
+	.consultation-form {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+		.consultation-form__item {
+			flex: 0 0 50%;
+			padding: 0 15px;
+		}
+		
+			.consultation-form__item + .consultation-form__item {
+				margin-top: 0;
+			}
+			
+			.consultation-form__item.consultation-form__item--privacy-policy {
+				flex: 0 0 100%;
+				margin-top: 10px;
+			}
+}

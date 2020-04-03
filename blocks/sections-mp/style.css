@@ -1,0 +1,201 @@
+.sections-mp {
+	font-size: var(--font-size--middle);
+}
+
+	.sections-mp__tabs {
+	}
+	
+		.sections-mp__tabs-item {
+			border: 1px solid var(--color-primary);
+			color: var(--color-primary);
+			cursor: pointer;
+			display: block;
+			font-weight: 600;
+			padding: 14px 18px;
+			text-align: center;
+			text-decoration: none;
+			transition: var(--transition);
+		}
+		
+			.sections-mp__tabs-item + .sections-mp__tabs-item {
+				margin-top: 10px;
+			}
+			
+			.sections-mp__tabs-item:hover,
+			.sections-mp__tabs-item:active,
+			.sections-mp__tabs-item.--is-active {
+				background: var(--color-primary);
+				color: #fff;
+			}
+			
+	.sections-mp__list-wr {
+		margin-top: 50px;
+	}
+		
+		.sections-mp__list {
+			display: none;
+		}
+		
+			.sections-mp__list.--is-active {
+				display: block;
+			}
+		
+			.sections-mp__item {
+				border-bottom: 1px solid var(--color-primary);
+				border-right: 1px solid var(--color-primary);
+			}
+			
+				.sections-mp__item:first-child {
+					border-top: 1px solid var(--color-primary);
+				}
+			
+				.sections-mp__link {
+					color: var(--color-black);
+					display: flex;
+					flex-direction: column;
+					height: 100%;
+					padding: 64px 20px 30px 20px;
+					position: relative;
+					text-decoration: none;
+					transition: var(--transition);
+				}
+			
+					.sections-mp__link:hover,
+					.sections-mp__link:active {
+						background: var(--color-primary);
+						color: #fff;
+					}
+					
+					.sections-mp__label {
+						background: #F3515B;
+						height: 46px;
+						left: 24px;
+						position: absolute;
+						top: 0;
+						width: 34px;
+					}
+					
+						.sections-mp__label:after {
+							border-bottom: 15px solid #fff;
+							border-left: 17px solid transparent;
+							border-right: 17px solid transparent;
+							bottom: 0;
+							content: '';
+							position: absolute;
+							transition: var(--transition);
+						}
+	
+						.sections-mp__link:hover .sections-mp__label:after {
+							border-bottom-color: var(--color-primary);
+						}
+					
+					.sections-mp__image {
+						align-items: center;
+						display: flex;
+						flex-grow: 1;
+						justify-content: center;
+					}
+					
+						.sections-mp__image img {
+							display: block;
+							max-height: 100%;
+							max-width: 100%;
+						}
+						
+					.sections-mp__title {
+						font-weight: 600;
+						margin-top: 34px;
+						text-align: center;
+						text-transform: uppercase;
+					}
+					
+						.sections-mp__title:before {
+							border-top: 1px solid var(--color-primary);
+							content: '';
+							display: block;
+							margin: 0 auto 14px auto;
+							transition: var(--transition);
+							width: 112px;
+						}
+						
+							.sections-mp__link:hover .sections-mp__title:before {
+								border-color: #fff;
+							}
+
+@media (min-width: 768px) {
+	.sections-mp__tabs {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: left;
+		margin: 0 -8px -11px -8px;
+	}
+	
+		.sections-mp__tabs-item {
+			margin-bottom: 11px;
+			margin-left: 8px;
+			margin-right: 8px;
+		}
+	
+			.sections-mp__tabs-item + .sections-mp__tabs-item {
+				margin-top: 0;
+			}
+			
+	.sections-mp__list {
+		align-items: stretch;
+		display: none;
+		flex-wrap: wrap;
+	}
+	
+		.sections-mp__list.--is-active {
+			display: flex;
+		}
+	
+		.sections-mp__item {
+			border-left: none;
+			flex: 0 0 33.33333%;
+			max-width: 33.33333%;
+		}
+}
+
+@media (min-width: 1200px) {
+	.sections-mp__tabs {
+		justify-content: center;
+	}
+	
+	.sections-mp__list {
+	}
+		
+		.sections-mp__item {
+			flex: 0 0 25%;
+			max-width: 25%;
+		}
+	
+			.sections-mp__item {
+			}
+}
+
+@media (max-width: 767px) {
+	.sections-mp__item {
+		border-left: 1px solid var(--color-primary);
+	}
+}
+
+@media (min-width: 768px) and  (max-width: 1199px) {
+	.sections-mp__item:nth-child(-n+3) {
+		border-top: 1px solid var(--color-primary);
+	}
+	
+	.sections-mp__item:nth-child(3n+1) {
+		border-left: 1px solid var(--color-primary);
+	}
+}
+
+@media (min-width: 1200px) {
+	.sections-mp__item:nth-child(-n+4) {
+		border-top: 1px solid var(--color-primary);
+	}
+	
+	.sections-mp__item:nth-child(4n+1) {
+		border-left: 1px solid var(--color-primary);
+	}
+}

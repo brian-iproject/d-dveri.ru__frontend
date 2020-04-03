@@ -1,0 +1,106 @@
+.stage-work {
+	counter-reset: item;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 -15px -30px -15px;
+}
+
+	.stage-work__item {
+		flex: 0 0 50%;
+		margin-bottom: 30px;
+		max-width: 50%;
+		padding: 0 15px;
+		position: relative;
+	}
+	
+		.stage-work__item-inner {
+			position: relative;
+			text-align: center;
+		}
+
+			.stage-work__item-inner:before {
+				align-items: center;
+				background: #fff;
+				border: 3px solid var(--color-primary);
+				border-radius: 50%;
+				color: var(--color-primary);
+				content: counters(item,".");
+				counter-increment: item;
+				display: flex;
+				font-size: 14px;
+				font-weight: 700;
+				height: 27px;
+				justify-content: center;
+				left: 50%;
+				margin-left: -60px;
+				position: absolute;
+				top: 10px;
+				width: 27px;
+			}
+	
+			.stage-work__image {
+				margin-bottom: 20px;
+			}
+			
+				.stage-work__image img {
+					display: block;
+					margin: 0 auto;
+					max-width: 100%;
+				}
+			
+			.stage-work__name {
+				font-size: 14px;
+				font-weight: 600;
+			}
+
+@media (max-width: 767px) {
+	.stage-work__item:nth-child(odd):not(:last-child):after {
+		border-top: 1px solid var(--color-secondary--light);
+		content: '';
+		left: 100%;
+		margin-left: -25px;
+		position: absolute;
+		top: 70px;
+		width: 50px;
+	}
+}
+
+@media (min-width: 768px) {
+		.stage-work__item {
+			flex: 0 0 33.33333%;
+			max-width: 33.33333%;
+		}
+		
+			.stage-work__item-inner {
+			}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.stage-work__item:not(:last-child):not(:nth-child(3n+3)):after {
+		border-top: 1px solid var(--color-secondary--light);
+		content: '';
+		left: 100%;
+		margin-left: -25px;
+		position: absolute;
+		top: 70px;
+		width: 50px;
+	}
+}
+
+@media (min-width: 992px) {
+	.stage-work__item {
+		flex: 0 0 20%;
+		max-width: 20%;
+	}
+	
+		.stage-work__item:not(:last-child):not(:nth-child(5n+5)):after {
+			border-top: 1px solid var(--color-secondary--light);
+			content: '';
+			left: 100%;
+			margin-left: -25px;
+			position: absolute;
+			top: 70px;
+			width: 50px;
+		}
+}

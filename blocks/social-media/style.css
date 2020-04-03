@@ -1,0 +1,21 @@
+.social-media {
+	display: flex;
+}
+
+	.social-media__item {
+		align-items: center;
+		background: var(--color-primary);
+		border-radius: 50%;
+		display: flex;
+		height: 31px;
+		justify-content: center;
+		margin: 0 10px;
+		width: 31px;
+	}
+	
+		.social-media__item .svg-icon {
+			display: block;
+			fill: var(--color-black);
+			max-height: 18px;
+			max-width: 18px;
+		}

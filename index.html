@@ -1,36 +1,668 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>Вёрстка</title>
+	<title>Главная</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&display=swap&subset=cyrillic" rel="stylesheet">
 	
 	<link href="libs/normalize/normalize.css" rel="stylesheet" type="text/css">
 	
 	<link href="styles.css" rel="stylesheet" type="text/css">
 	<link href="template_styles.css" rel="stylesheet" type="text/css">
 	
-	<script src="libs/jquery/jquery-3.4.1.min.js" defer></script>
+	<link href="libs/slick/slick.css" rel="stylesheet" type="text/css">
+	
+	<link href="blocks/basket-mini/style.css" rel="stylesheet" type="text/css">
+	<link href="blocks/search-header/style.css" rel="stylesheet" type="text/css">
+	<link href="blocks/main-menu/style.css" rel="stylesheet" type="text/css">
+	<link href="blocks/page-slider/style.css" rel="stylesheet" type="text/css">
+	<link href="blocks/sections-mp/style.css" rel="stylesheet" type="text/css">
+	<link href="blocks/social-media/style.css" rel="stylesheet" type="text/css">
+	<link href="blocks/order-consultation/style.css" rel="stylesheet" type="text/css">
+	<link href="blocks/consultation-form/style.css" rel="stylesheet" type="text/css">
+	<link href="blocks/advantages/style.css" rel="stylesheet" type="text/css">
+	<link href="blocks/stage-work/style.css" rel="stylesheet" type="text/css">
+	<link href="blocks/last-news/style.css" rel="stylesheet" type="text/css">
+	<link href="blocks/delivery-sections/style.css" rel="stylesheet" type="text/css">
+	<link href="blocks/footer-menu/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div style="display: none">
 	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		<symbol viewBox="0 0 24 24" id="svg-icon-timer">
-			<path d="M1011,40a12,12,0,1,0,12,12A12,12,0,0,0,1011,40Zm0.75,22.462V61h-1.5v1.462a10.5,10.5,0,0,1-9.71-9.712H1002v-1.5h-1.46a10.5,10.5,0,0,1,9.71-9.712V43h1.5V41.538a10.5,10.5,0,0,1,9.71,9.712H1020v1.5h1.46A10.5,10.5,0,0,1,1011.75,62.462Zm4.77-13.649a0.379,0.379,0,0,1-.14.513l-3.96,2.287a1.276,1.276,0,0,1,.08.388,1.5,1.5,0,0,1-3,0l-4.07-2.35a0.751,0.751,0,1,1,.75-1.3l4.09,2.364a1.436,1.436,0,0,1,1.8.237l3.94-2.276A0.375,0.375,0,0,1,1016.52,48.812Z" transform="translate(-999 -40)"/>
+		<symbol viewBox="0 0 10 10" id="icon-timer">
+			<path d="M5 0C2.23864 0 0 2.23864 0 5C0 7.76148 2.23864 10 5 10C7.76148 10 10 7.76148 10 5C10 2.23864 7.76148 0 5 0ZM5 9.09091C2.74068 9.09091 0.909091 7.25932 0.909091 5C0.909091 2.74068 2.74068 0.909091 5 0.909091C7.25932 0.909091 9.09091 2.74068 9.09091 5C9.09091 7.25932 7.25932 9.09091 5 9.09091Z"/>
+			<path d="M5.45499 4.81176V2.27278C5.45499 2.02176 5.25147 1.81824 5.00045 1.81824C4.74942 1.81824 4.5459 2.02176 4.5459 2.27278V5.00005C4.5459 5.00108 4.54624 5.0021 4.54624 5.00312C4.54635 5.03187 4.54919 5.06062 4.55488 5.08892C4.5576 5.1029 4.56272 5.11551 4.56669 5.12915C4.57113 5.14415 4.57453 5.15937 4.58056 5.17403C4.58715 5.18971 4.59601 5.20403 4.60419 5.2188C4.61033 5.23017 4.61522 5.24153 4.62238 5.25233C4.63908 5.27744 4.65806 5.30096 4.67931 5.32199L5.96465 6.60744C6.14215 6.78494 6.43022 6.78494 6.60761 6.60744C6.78511 6.42994 6.78511 6.14187 6.60761 5.96471L5.45499 4.81176Z"/>
+		</symbol>
+		<symbol viewBox="0 0 9 15" id="icon-map-point">
+			<path d="M4.083,5.87549a1.68388,1.68388,0,0,1,0-3.3667,1.68388,1.68388,0,0,1,0,3.3667Zm0-2.42529a.74249.74249,0,1,0,.71387.74218A.72885.72885,0,0,0,4.083,3.4502Z"/>
+			<path d="M4.0835,13.64551C1.75537,13.64551,0,12.75586,0,11.57617,0,10.67773.95215,9.957,2.51074,9.65332L.59229,6.334a4.17932,4.17932,0,0,1-.58106-2.1416A4.14133,4.14133,0,0,1,4.08936,0,4.14092,4.14092,0,0,1,8.167,4.19238a4.26847,4.26847,0,0,1-.60058,2.18311L5.59668,9.64355C7.1709,9.94141,8.167,10.68066,8.167,11.57617,8.167,12.75586,6.41113,13.64551,4.0835,13.64551Zm-1.06739-3.1211c-1.29394.18848-2.0874.68262-2.0874,1.05176,0,.38281,1.11328,1.12793,3.15479,1.12793s3.15478-.74512,3.15478-1.12793c0-.38183-.86426-.88672-2.167-1.0625l-.64746,1.07227a.46037.46037,0,0,1-.79541-.00586ZM4.08936.94141a3.205,3.205,0,0,0-3.14942,3.251,3.31279,3.31279,0,0,0,.48535,1.72705l.041.08594,2.56933,4.42139.354-.58594c.041-.07129.04883-.084.085-.14062L6.73535,5.957a3.40169,3.40169,0,0,0,.50293-1.76465A3.20518,3.20518,0,0,0,4.08936.94141ZM1.05615,6.145l.01367.02393.14209-.11915Z"/>
+		</symbol>
+		<symbol viewBox="0 0 12 9" id="icon-email">
+			<path d="M10.3636 0H1.63636C0.732682 0 0 0.671625 0 1.5V7.5C0 8.32837 0.732682 9 1.63636 9H10.3636C11.2673 9 12 8.32837 12 7.5V1.5C12 0.671625 11.2673 0 10.3636 0ZM10.3636 1C10.4262 1 10.4854 1.01163 10.5413 1.02938L6 4.35962L1.45868 1.02938C1.51473 1.01163 1.57377 1 1.63636 1H10.3636ZM10.3636 8H1.63636C1.335 8 1.09091 7.77625 1.09091 7.5V2.04037L5.65923 5.39038C5.75877 5.4635 5.87945 5.5 6 5.5C6.12055 5.5 6.24123 5.4635 6.34077 5.39038L10.9091 2.04037V7.5C10.9091 7.77625 10.665 8 10.3636 8Z"/>
+		</symbol>
+		<symbol viewBox="0 0 10 10" id="icon-phone">
+			<path d="M9.23659 7.2348C8.93307 6.97946 8.58642 6.76684 8.2829 6.55403C7.63252 6.08607 7.02568 6.08607 6.54884 6.80937C6.28865 7.2348 5.89846 7.2348 5.50848 7.06471C4.4246 6.55422 3.55757 5.83093 3.03739 4.72472C2.82053 4.25676 2.82053 3.7888 3.34091 3.44841C3.6011 3.27832 3.90442 3.0655 3.86109 2.64007C3.81776 2.12959 2.56054 0.385324 2.04036 0.215031C1.82351 0.129983 1.60685 0.129983 1.38999 0.215031C0.21944 0.597942 -0.300737 1.57638 0.176109 2.68259C1.56332 6.08607 4.07774 8.42606 7.4592 9.87246C7.67586 9.9575 7.89271 9.9575 7.97938 10C8.75974 10 9.6701 9.27673 9.93029 8.55363C10.1905 7.87285 9.6701 7.57519 9.23659 7.2348Z"/>
+		</symbol>
+		<symbol viewBox="0 0 15 12" id="icon-basket">
+			<path d="M14.0625 5.14286C14.3213 5.14286 14.5422 5.22656 14.7253 5.39397C14.9084 5.56138 15 5.76339 15 6C15 6.23661 14.9084 6.43862 14.7253 6.60603C14.5422 6.77344 14.3213 6.85714 14.0625 6.85714H13.9526L13.1104 11.2902C13.0713 11.4955 12.9639 11.6652 12.7881 11.7991C12.6123 11.933 12.4121 12 12.1875 12H2.8125C2.58789 12 2.3877 11.933 2.21191 11.7991C2.03613 11.6652 1.92871 11.4955 1.88965 11.2902L1.04736 6.85714H0.9375C0.678711 6.85714 0.457764 6.77344 0.274658 6.60603C0.0915527 6.43862 0 6.23661 0 6C0 5.76339 0.0915527 5.56138 0.274658 5.39397C0.457764 5.22656 0.678711 5.14286 0.9375 5.14286H14.0625ZM3.55225 10.5C3.6792 10.4911 3.7854 10.4408 3.87085 10.3493C3.9563 10.2578 3.99414 10.154 3.98438 10.0379L3.75 7.25223C3.74023 7.13616 3.6853 7.03906 3.58521 6.96094C3.48511 6.88281 3.37158 6.84821 3.24463 6.85714C3.11768 6.86607 3.01147 6.91629 2.92603 7.00781C2.84058 7.09933 2.80273 7.20312 2.8125 7.3192L3.04688 10.1049C3.05664 10.2165 3.10669 10.3103 3.19702 10.3862C3.28735 10.4621 3.39355 10.5 3.51562 10.5H3.55225ZM6.5625 10.0714V7.28571C6.5625 7.16964 6.51611 7.0692 6.42334 6.98438C6.33057 6.89955 6.2207 6.85714 6.09375 6.85714C5.9668 6.85714 5.85693 6.89955 5.76416 6.98438C5.67139 7.0692 5.625 7.16964 5.625 7.28571V10.0714C5.625 10.1875 5.67139 10.2879 5.76416 10.3728C5.85693 10.4576 5.9668 10.5 6.09375 10.5C6.2207 10.5 6.33057 10.4576 6.42334 10.3728C6.51611 10.2879 6.5625 10.1875 6.5625 10.0714ZM9.375 10.0714V7.28571C9.375 7.16964 9.32861 7.0692 9.23584 6.98438C9.14307 6.89955 9.0332 6.85714 8.90625 6.85714C8.7793 6.85714 8.66943 6.89955 8.57666 6.98438C8.48389 7.0692 8.4375 7.16964 8.4375 7.28571V10.0714C8.4375 10.1875 8.48389 10.2879 8.57666 10.3728C8.66943 10.4576 8.7793 10.5 8.90625 10.5C9.0332 10.5 9.14307 10.4576 9.23584 10.3728C9.32861 10.2879 9.375 10.1875 9.375 10.0714ZM11.9531 10.1049L12.1875 7.3192C12.1973 7.20312 12.1594 7.09933 12.074 7.00781C11.9885 6.91629 11.8823 6.86607 11.7554 6.85714C11.6284 6.84821 11.5149 6.88281 11.4148 6.96094C11.3147 7.03906 11.2598 7.13616 11.25 7.25223L11.0156 10.0379C11.0059 10.154 11.0437 10.2578 11.1292 10.3493C11.2146 10.4408 11.3208 10.4911 11.4478 10.5H11.4844C11.6064 10.5 11.7126 10.4621 11.803 10.3862C11.8933 10.3103 11.9434 10.2165 11.9531 10.1049ZM3.48633 1.95536L2.80518 4.71429H1.83838L2.57812 1.76116C2.6709 1.3683 2.88818 1.04799 3.22998 0.800223C3.57178 0.552455 3.9624 0.428571 4.40186 0.428571H5.625C5.625 0.3125 5.67139 0.212054 5.76416 0.127232C5.85693 0.0424107 5.9668 0 6.09375 0H8.90625C9.0332 0 9.14307 0.0424107 9.23584 0.127232C9.32861 0.212054 9.375 0.3125 9.375 0.428571H10.5981C11.0376 0.428571 11.4282 0.552455 11.77 0.800223C12.1118 1.04799 12.3291 1.3683 12.4219 1.76116L13.1616 4.71429H12.1948L11.5137 1.95536C11.46 1.75893 11.3489 1.59821 11.1804 1.47321C11.012 1.34821 10.8179 1.28571 10.5981 1.28571H9.375C9.375 1.40179 9.32861 1.50223 9.23584 1.58705C9.14307 1.67188 9.0332 1.71429 8.90625 1.71429H6.09375C5.9668 1.71429 5.85693 1.67188 5.76416 1.58705C5.67139 1.50223 5.625 1.40179 5.625 1.28571H4.40186C4.18213 1.28571 3.98804 1.34821 3.81958 1.47321C3.65112 1.59821 3.54004 1.75893 3.48633 1.95536Z"/>
+		</symbol>
+		<symbol viewBox="0 0 10.03883 10.5" id="icon-loupe">
+			<path d="M9.873,9.51953,7.28223,6.92871a4.16074,4.16074,0,1,0-.87891.75L9.05859,10.334A.56637.56637,0,0,0,9.46,10.5.57718.57718,0,0,0,9.873,9.51953ZM4.165.96045A3.20484,3.20484,0,1,1,.96045,4.165,3.20823,3.20823,0,0,1,4.165.96045Z"/>
+		</symbol>
+		<symbol viewBox="0 0 18 10" id="icon-vk">
+			<path d="M9.49607 9.82084C9.49607 9.82084 9.79786 9.78793 9.95243 9.62496C10.0939 9.47564 10.089 9.19387 10.089 9.19387C10.089 9.19387 10.0702 7.8781 10.6926 7.68383C11.3059 7.49276 12.0935 8.95624 12.9293 9.51899C13.5607 9.94447 14.04 9.85135 14.04 9.85135L16.2735 9.82084C16.2735 9.82084 17.4413 9.75019 16.8877 8.84867C16.8419 8.77481 16.5646 8.18155 15.2275 6.96293C13.8265 5.6873 14.0146 5.89362 15.701 3.68676C16.7282 2.3429 17.1387 1.52246 17.0103 1.17164C16.8885 0.836075 16.1328 0.925184 16.1328 0.925184L13.6188 0.940437C13.6188 0.940437 13.4323 0.91555 13.2941 0.996632C13.1592 1.07611 13.0717 1.26155 13.0717 1.26155C13.0717 1.26155 12.6742 2.30116 12.1434 3.18583C11.0238 5.0515 10.5764 5.15024 10.3932 5.03464C9.96715 4.7641 10.0735 3.94927 10.0735 3.37047C10.0735 1.56179 10.3532 0.807977 9.5296 0.612901C9.25645 0.547875 9.05526 0.505327 8.35601 0.498102C7.45885 0.489272 6.69989 0.501313 6.26971 0.707629C5.98347 0.844905 5.76265 1.15157 5.8976 1.16923C6.06362 1.19091 6.43982 1.26878 6.63937 1.5353C6.89699 1.87969 6.888 2.65197 6.888 2.65197C6.888 2.65197 7.03603 4.78096 6.54205 5.04507C6.20347 5.2265 5.73894 4.85642 4.74036 3.16335C4.22921 2.29634 3.84319 1.33782 3.84319 1.33782C3.84319 1.33782 3.76877 1.15879 3.63546 1.06246C3.47435 0.946056 3.24945 0.909931 3.24945 0.909931L0.860548 0.925184C0.860548 0.925184 0.501519 0.934817 0.369847 1.08815C0.252897 1.22382 0.360851 1.5056 0.360851 1.5056C0.360851 1.5056 2.23124 5.8013 4.34943 7.96641C6.29179 9.95089 8.49668 9.82084 8.49668 9.82084H9.49607Z"/>
+		</symbol>
+		<symbol viewBox="0 0 9 18" id="icon-fb">
+			<path d="M6.10617 17.8942V9.36552H8.46045L8.77244 6.4265H6.10617L6.11017 4.95549C6.11017 4.18895 6.183 3.77822 7.28397 3.77822H8.75577V0.838867H6.40116C3.57289 0.838867 2.57741 2.26461 2.57741 4.66226V6.42683H0.814453V9.36585H2.57741V17.8942H6.10617Z"/>
+		</symbol>
+		<symbol viewBox="0 0 17 17" id="icon-instagram">
+			<path d="M16.9838 4.99805C16.9439 4.09477 16.7979 3.47378 16.5886 2.93568C16.3728 2.3645 16.0407 1.85312 15.6056 1.42801C15.1804 0.996288 14.6657 0.660819 14.1011 0.44833C13.5599 0.239083 12.9422 0.0930128 12.0389 0.0531872C11.1289 0.00998882 10.84 0 8.53192 0C6.22386 0 5.93496 0.00998882 5.02831 0.0498144C4.12504 0.08964 3.50405 0.23584 2.96608 0.444957C2.39477 0.660819 1.88339 0.992915 1.45828 1.42801C1.02656 1.85312 0.691222 2.36787 0.478603 2.93243C0.269356 3.47378 0.123286 4.0914 0.0834606 4.99467C0.0402622 5.90469 0.0302734 6.19359 0.0302734 8.50166C0.0302734 10.8097 0.0402622 11.0986 0.0800878 12.0053C0.119913 12.9085 0.266113 13.5295 0.475359 14.0676C0.691222 14.6388 1.02656 15.1502 1.45828 15.5753C1.88339 16.007 2.39814 16.3425 2.9627 16.555C3.50405 16.7642 4.12167 16.9103 5.02507 16.9501C5.93159 16.9901 6.22061 16.9999 8.52868 16.9999C10.8367 16.9999 11.1256 16.9901 12.0323 16.9501C12.9356 16.9103 13.5566 16.7642 14.0945 16.555C15.237 16.1133 16.1403 15.21 16.582 14.0676C16.7911 13.5263 16.9373 12.9085 16.9771 12.0053C17.017 11.0986 17.027 10.8097 17.027 8.50166C17.027 6.19359 17.0236 5.90469 16.9838 4.99805ZM15.4529 11.9389C15.4163 12.7691 15.2768 13.2174 15.1606 13.5163C14.8749 14.2569 14.2872 14.8447 13.5466 15.1303C13.2477 15.2466 12.7961 15.386 11.9691 15.4225C11.0725 15.4624 10.8035 15.4723 8.53529 15.4723C6.26706 15.4723 5.99476 15.4624 5.10135 15.4225C4.27111 15.386 3.82278 15.2466 3.52389 15.1303C3.15535 14.9941 2.81988 14.7783 2.54758 14.496C2.2653 14.2203 2.04944 13.8882 1.91323 13.5197C1.797 13.2208 1.65754 12.7691 1.62109 11.9422C1.58113 11.0456 1.57127 10.7765 1.57127 8.50828C1.57127 6.24003 1.58113 5.96774 1.62109 5.07445C1.65754 4.24421 1.797 3.79588 1.91323 3.497C2.04944 3.12832 2.2653 2.79298 2.55096 2.52056C2.82649 2.23828 3.15859 2.02241 3.52727 1.88633C3.82615 1.7701 4.27785 1.63064 5.10472 1.59406C6.00138 1.55424 6.27043 1.54425 8.53854 1.54425C10.8101 1.54425 11.0791 1.55424 11.9725 1.59406C12.8027 1.63064 13.2511 1.7701 13.5499 1.88633C13.9185 2.02241 14.254 2.23828 14.5262 2.52056C14.8085 2.79622 15.0244 3.12832 15.1606 3.497C15.2768 3.79588 15.4163 4.24746 15.4529 5.07445C15.4927 5.97111 15.5027 6.24003 15.5027 8.50828C15.5027 10.7765 15.4927 11.0422 15.4529 11.9389Z"/>
+			<path d="M8.5321 4.13477C6.12116 4.13477 4.16504 6.09076 4.16504 8.50183C4.16504 10.9129 6.12116 12.8689 8.5321 12.8689C10.9432 12.8689 12.8992 10.9129 12.8992 8.50183C12.8992 6.09076 10.9432 4.13477 8.5321 4.13477ZM8.5321 11.3346C6.96801 11.3346 5.6993 10.0661 5.6993 8.50183C5.6993 6.93761 6.96801 5.66902 8.5321 5.66902C10.0963 5.66902 11.3649 6.93761 11.3649 8.50183C11.3649 10.0661 10.0963 11.3346 8.5321 11.3346V11.3346Z"/>
+			<path d="M14.0909 3.96189C14.0909 4.5249 13.6344 4.98141 13.0713 4.98141C12.5083 4.98141 12.0518 4.5249 12.0518 3.96189C12.0518 3.39876 12.5083 2.94238 13.0713 2.94238C13.6344 2.94238 14.0909 3.39876 14.0909 3.96189V3.96189Z"/>
+		</symbol>
+		
+		
+		<!--
+			Цветные иконки
+		-->
+		<symbol viewBox="0 0 21 21" id="image-telegram">
+			<path d="M10.0385 20.0771C15.5826 20.0771 20.077 15.5827 20.077 10.0386C20.077 4.4945 15.5826 0.00012207 10.0385 0.00012207C4.49438 0.00012207 0 4.4945 0 10.0386C0 15.5827 4.49438 20.0771 10.0385 20.0771Z" fill="#37AEE2"/>
+			<path d="M8.19784 14.6395C7.87263 14.6395 7.92789 14.5167 7.81573 14.2071L6.85938 11.0596L14.2209 6.69238" fill="#C8DAEA"/>
+			<path d="M8.19824 14.6397C8.4492 14.6397 8.56009 14.5249 8.70017 14.3887L10.0386 13.0872L8.36906 12.0804" fill="#A9C9DD"/>
+			<path d="M8.3683 12.0805L12.4138 15.0694C12.8755 15.3241 13.2086 15.1922 13.3236 14.6408L14.9704 6.88079C15.139 6.20485 14.7127 5.89828 14.2711 6.09878L4.60149 9.82732C3.94145 10.0921 3.9453 10.4603 4.48118 10.6244L6.96261 11.3989L12.7074 7.77456C12.9786 7.6101 13.2275 7.69852 13.0232 7.87983" fill="white"/>
+		</symbol>
+		
+		<symbol viewBox="0 0 21 21" id="image-viber">
+			<path d="M10.0385 5.53131e-05C15.5826 5.53131e-05 20.077 4.49444 20.077 10.0385C20.077 15.5826 15.5826 20.077 10.0385 20.077C4.49438 20.077 0 15.5826 0 10.0385C0 4.49444 4.49438 5.53131e-05 10.0385 5.53131e-05Z" fill="#7F4DA0"/>
+			<path d="M12.7128 8.76632C12.664 8.36967 12.5421 8.05822 12.3256 7.78235C12.0444 7.42712 11.6852 7.21441 11.1533 7.08822C10.8066 7.00412 10.6666 7.01377 10.5412 7.12829C10.4244 7.23558 10.4016 7.45068 10.4909 7.58996C10.5536 7.69106 10.626 7.72728 10.8274 7.7668C11.0955 7.81614 11.2809 7.88017 11.4494 7.97656C11.8072 8.18316 11.9739 8.50646 11.9917 9.02986C12 9.27561 12.0213 9.35116 12.1071 9.43833C12.2662 9.59766 12.5493 9.56667 12.6694 9.376C12.7135 9.30414 12.7202 9.27286 12.7249 9.10598C12.7279 9.00267 12.7235 8.8489 12.7128 8.76632Z" fill="white"/>
+			<path d="M14.1142 9.21332C14.0436 7.99809 13.5682 7.02038 12.7176 6.33248C12.2383 5.94595 11.6589 5.68017 11.0239 5.55091C10.7913 5.50468 10.363 5.46721 10.2895 5.48864C10.2202 5.50849 10.1221 5.58356 10.0784 5.65146C10.0322 5.72508 10.0217 5.88946 10.0612 5.98455C10.1248 6.1435 10.2432 6.19966 10.5748 6.22867C11.086 6.27339 11.6132 6.45298 12.0116 6.71885C12.4664 7.02157 12.8279 7.43561 13.0618 7.92215C13.2639 8.34019 13.3881 8.94263 13.3847 9.4821C13.3835 9.67722 13.4137 9.78741 13.4921 9.86797C13.6106 9.99184 13.7832 10.0189 13.9356 9.93665C14.1045 9.84785 14.144 9.69196 14.1142 9.21332Z" fill="white"/>
+			<path d="M15.665 13.8933C15.6412 13.8239 15.5857 13.7167 15.5461 13.6552C15.2964 13.2782 13.9552 12.2286 13.2855 11.8853C12.9032 11.6889 12.6198 11.6234 12.4098 11.6849C12.184 11.7484 12.0651 11.8535 11.6867 12.3238C11.5341 12.5123 11.3776 12.6889 11.336 12.7167C11.233 12.7881 11.0309 12.8457 10.8883 12.8457C10.5574 12.8437 9.95708 12.6294 9.49546 12.3476C9.13686 12.1294 8.67724 11.7385 8.32456 11.3515C7.90849 10.8972 7.62521 10.4964 7.40131 10.0439C7.11207 9.46258 7.03876 9.10739 7.1596 8.84745C7.18933 8.78198 7.22896 8.71255 7.24676 8.69069C7.26461 8.67088 7.45085 8.51808 7.65688 8.3514C8.06106 8.02997 8.12644 7.95656 8.20172 7.73631C8.29681 7.45651 8.27107 7.17079 8.12446 6.88309C8.01152 6.66482 7.71632 6.18861 7.50236 5.88107C7.21905 5.4763 6.51373 4.61118 6.37304 4.49408C6.11945 4.28774 5.79456 4.252 5.43593 4.39093C5.05755 4.53776 4.34825 5.10921 4.04512 5.50804C3.77171 5.86916 3.66674 6.12511 3.65088 6.46243C3.63702 6.74021 3.66078 6.8553 3.8074 7.21049C4.95452 9.99632 6.66627 12.2206 9.01799 13.9866C10.2463 14.9092 11.5203 15.6117 12.8417 16.0919C13.6124 16.3716 13.9472 16.3855 14.3415 16.1554C14.5079 16.0561 14.92 15.6335 15.1498 15.3259C15.5302 14.814 15.6709 14.5779 15.7105 14.3894C15.7383 14.2604 15.7165 14.0362 15.665 13.8933Z" fill="white"/>
+			<path d="M15.541 9.49258C15.5156 8.80518 15.3999 8.24134 15.1585 7.61271C14.9203 6.99435 14.6791 6.59083 14.2237 6.04506C13.7932 5.53334 13.4588 5.24116 12.9284 4.91592C12.1884 4.46277 11.2879 4.16289 10.2787 4.03677C9.93452 3.9927 9.85666 3.99585 9.75107 4.0663C9.54646 4.19976 9.54919 4.53265 9.75445 4.66412C9.82239 4.70594 9.88268 4.72117 10.158 4.7572C10.5806 4.8141 10.8523 4.86772 11.1748 4.9557C12.4392 5.30135 13.4116 6.00787 14.0617 7.05667C14.6057 7.93085 14.8315 8.8051 14.7994 9.92165C14.7883 10.2991 14.7964 10.3656 14.8541 10.4562C14.9646 10.6253 15.256 10.6587 15.4055 10.5185C15.4985 10.433 15.516 10.3688 15.5344 10.0457C15.5431 9.87718 15.545 9.62838 15.541 9.49258Z" fill="white"/>
+		</symbol>
+		
+		<symbol viewBox="0 0 21 21" id="image-whatsapp">
+			<path d="M10.9613 20.0771C16.5054 20.0771 20.9998 15.5827 20.9998 10.0386C20.9998 4.4945 16.5054 0.00012207 10.9613 0.00012207C5.41723 0.00012207 0.922852 4.4945 0.922852 10.0386C0.922852 15.5827 5.41723 20.0771 10.9613 20.0771Z" fill="#25D366"/>
+			<path d="M11.2918 15.6235H11.2894C10.2903 15.6231 9.30869 15.3725 8.43682 14.8969L5.27246 15.727L6.1193 12.6338C5.59693 11.7285 5.32206 10.7017 5.32251 9.6496C5.32382 6.35842 8.0016 3.68079 11.2918 3.68079C12.8886 3.68148 14.3873 4.30312 15.5143 5.43142C16.6413 6.55966 17.2616 8.05938 17.261 9.65431C17.2597 12.9447 14.5829 15.6221 11.2918 15.6235ZM8.58339 13.8163L8.76455 13.9238C9.5263 14.3758 10.3995 14.615 11.2898 14.6153H11.2918C14.0263 14.6153 16.252 12.3896 16.2531 9.65396C16.2536 8.32826 15.738 7.08177 14.8013 6.14396C13.8646 5.20616 12.6189 4.68945 11.2937 4.68899C8.55706 4.68899 6.33138 6.91447 6.33029 9.64994C6.32991 10.5874 6.59221 11.5004 7.08885 12.2903L7.20682 12.478L6.70561 14.3088L8.58339 13.8163ZM14.2991 11.0736C14.2619 11.0114 14.1624 10.9741 14.0133 10.8994C13.8641 10.8248 13.1309 10.464 12.9941 10.4142C12.8574 10.3644 12.758 10.3395 12.6585 10.4888C12.5591 10.6381 12.2733 10.9741 12.1863 11.0736C12.0993 11.1732 12.0123 11.1857 11.8632 11.111C11.714 11.0363 11.2334 10.8788 10.6637 10.3707C10.2203 9.97517 9.92099 9.48677 9.83399 9.33745C9.74699 9.18813 9.82472 9.10744 9.89938 9.03306C9.96649 8.96621 10.0485 8.85882 10.1231 8.77175C10.1977 8.68468 10.2225 8.62243 10.2723 8.52296C10.322 8.42337 10.2971 8.3363 10.2598 8.26164C10.2225 8.18698 9.92426 7.45283 9.79997 7.15419C9.67889 6.86335 9.55593 6.90275 9.46439 6.89816C9.37749 6.89379 9.27795 6.89287 9.17853 6.89287C9.0791 6.89287 8.91751 6.9302 8.7808 7.07952C8.64409 7.22885 8.25878 7.58969 8.25878 8.32378C8.25878 9.05793 8.79322 9.76716 8.8678 9.86668C8.94237 9.96627 9.91951 11.4727 11.4157 12.1188C11.7716 12.2725 12.0494 12.3642 12.266 12.433C12.6233 12.5465 12.9485 12.5305 13.2054 12.4921C13.492 12.4493 14.0878 12.1313 14.2122 11.7829C14.3364 11.4345 14.3364 11.1358 14.2991 11.0736Z" fill="#FDFDFD"/>
 		</symbol>
 	</svg>
 </div>
 <div class="page-wrapper">
-	<header class="page-header"></header>
-	<nav class="page-nav"></nav>
-	<main class="page-content"></main>
-	<footer class="page-footer"></footer>
+	<header class="page-header">
+		<div class="page-header__top">
+			<div class="page-container--fluid page-header__top-inner">
+				<div class="page-header__time-work">
+					<svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-timer"></use></svg>
+					Пн-Пт:  9:00 - 17:00
+				</div>
+				<div class="page-header__address">
+					<svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-map-point"></use></svg>
+					г. Москва, ул. Таганская, д. 40, стр. 2
+				</div>
+				<div class="page-header__email">
+					<svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-email"></use></svg>
+					<a href="mailto:info@d-dveri.ru">info@d-dveri.ru</a>
+				</div>
+				<div class="page-header__messengers">
+					<svg class="svg-image"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#image-telegram"></use></svg>
+					<svg class="svg-image"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#image-viber"></use></svg>
+					<svg class="svg-image"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#image-whatsapp"></use></svg>
+				</div>
+			</div>
+		</div>
+		<div class="page-header__bottom">
+			<div class="page-container--fluid page-header__bottom-inner">
+				<div class="page-header__basket">
+					<div class="basket-mini">
+						<a href="#" class="basket-mini__link">
+							<div class="basket-mini__icon"><svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-basket"></use></svg></div>
+							<div class="basket-mini__info">0 товаров, 0 руб</div>
+						</a>
+					</div>
+				</div>
+				<div class="page-header__logo">
+					<div class="page-header__logo-image"><img src="images/logo.svg" alt=""></div>
+					<div class="page-header__slogan">Металлические<br>двери и решетки</div>
+				</div>
+				<div class="page-header__phone">
+					<div class="page-header__phone-item">
+						<svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use></svg>
+						+7 (495) 777–88–87
+					</div>
+					<div class="page-header__phone-item">
+						<svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use></svg>
+						+7 (495) 777–88–87
+					</div>
+					<div class="page-header__phone-item"><a href="#">Мы вам перезвоним</a></div>
+				</div>
+				<div class="page-header__search-desktop">
+					<div class="search-header">
+						<label>
+							<input type="text" class="search-header__input" placeholder="Поиск">
+						</label>
+						<button class="search-header__button"><svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-loupe"></use></svg></button>
+					</div>
+				</div>
+			</div>
+			<nav class="page-container--fluid page-header__nav">
+				<div class="page-header__nav-inner">
+					<div class="page-header__menu">
+						<div class="main-menu">
+						<ul class="main-menu__list main-menu__list--lvl1">
+							<li class="main-menu__item main-menu__item--lvl1 main-menu__item--parent main-menu__item--wide">
+								<a href="#" class="main-menu__link main-menu__link--lvl1 main-menu__link--parent">Каталог</a>
+								<ul class="main-menu__list main-menu__list--lvl2">
+									<li class="main-menu__item main-menu__item--lvl2">
+										<a href="#" class="main-menu__link main-menu__link--lvl2">Двери</a>
+										<ul class="main-menu__list main-menu__list--lvl3">
+											<li class="main-menu__item main-menu__item--lvl3 main-menu__item--parent">
+												<a href="#" class="main-menu__link main-menu__link--lvl3">По назначению</a>
+												<ul class="main-menu__list main-menu__list--lvl4">
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">в квартиру</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">тамбурные</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">для подъезда</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">временные</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">с теплоизоляцией</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">тамбурные</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">для офиса</a></li>
+												</ul>
+											</li>
+											<li class="main-menu__item main-menu__item--lvl3 main-menu__item--parent">
+												<a href="#" class="main-menu__link main-menu__link--lvl3">По материалу отделки</a>
+												<ul class="main-menu__list main-menu__list--lvl4">
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С порошковым напылением</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С краской Hammerite</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Винорит</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">МДФ</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С краской грунт-эмаль «3 в 1»</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">с фотопленкой</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">массив</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li class="main-menu__item main-menu__item--lvl2">
+										<a href="#" class="main-menu__link main-menu__link--lvl2">Решетки на окна</a>
+										<ul class="main-menu__list main-menu__list--lvl3">
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Сварные</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Кованные</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Дутые</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">для дачи</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">для цветов</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">на половину окна</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">ажурные</a></li>
+										</ul>
+									</li>
+									<li class="main-menu__item main-menu__item--lvl2">
+										<a href="#" class="main-menu__link main-menu__link--lvl2">Системы контроля доступа</a>
+										<ul class="main-menu__list main-menu__list--lvl3">
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Сварные</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Кованные</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Дутые</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">для дачи</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">для цветов</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">на половину окна</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">ажурные</a></li>
+										</ul>
+									</li>
+									<li class="main-menu__item main-menu__item--lvl2">
+										<a href="#" class="main-menu__link main-menu__link--lvl2">Решетки на окна</a>
+										<ul class="main-menu__list main-menu__list--lvl3">
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Сварные</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Кованные</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Дутые</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">для дачи</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">для цветов</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">на половину окна</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">ажурные</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="main-menu__item main-menu__item--lvl1 main-menu__item--parent">
+								<a href="#" class="main-menu__link main-menu__link--lvl1">Услуги</a>
+								<ul class="main-menu__list main-menu__list--lvl2">
+									<li class="main-menu__item main-menu__item--lvl2"><a href="#" class="main-menu__link main-menu__link--lvl2">Установка</a></li>
+									<li class="main-menu__item main-menu__item--lvl2"><a href="#" class="main-menu__link main-menu__link--lvl2">Доставка</a></li>
+									<li class="main-menu__item main-menu__item--lvl2"><a href="#" class="main-menu__link main-menu__link--lvl2">Изготовление/Производство</a></li>
+								</ul>
+							</li>
+							<li class="main-menu__item main-menu__item--lvl1"><a href="#" class="main-menu__link main-menu__link--lvl1">Акции</a></li>
+							<li class="main-menu__item main-menu__item--lvl1"><a href="#" class="main-menu__link main-menu__link--lvl1">О компании</a></li>
+							<li class="main-menu__item main-menu__item--lvl1"><a href="#" class="main-menu__link main-menu__link--lvl1">Галерея</a></li>
+							<li class="main-menu__item main-menu__item--lvl1"><a href="#" class="main-menu__link main-menu__link--lvl1">Оплата</a></li>
+							<li class="main-menu__item main-menu__item--lvl1"><a href="#" class="main-menu__link main-menu__link--lvl1">Гарантия</a></li>
+							<li class="main-menu__item main-menu__item--lvl1"><a href="#" class="main-menu__link main-menu__link--lvl1">Контакты</a></li>
+						</ul>
+					</div>
+					</div>
+					<div class="page-header__search-mobile">
+						<div class="search-header">
+							<label>
+								<input type="text" class="search-header__input" placeholder="Поиск">
+							</label>
+							<button class="search-header__button"><svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-loupe"></use></svg></button>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<main class="page-content">
+		<div class="page-container--fluid page-content__slider">
+			<div class="page-slider js-page-slider">
+				<div class="page-slider__item">
+					<picture class="page-slider__image">
+						<source srcset="blocks/page-slider/images/slide1-320.jpg" media="(max-width: 767px)">
+						<img src="blocks/page-slider/images/slide1.jpg" alt="">
+					</picture>
+					<div class="page-slider__info">
+						<div class="page-slider__info-inner page-slider__info-inner--background">
+							<div class="page-slider__name">Сезонное предложение — дверь с терморазрывом<br>от <span class="color-green">26 000 руб.</span></div>
+							<div class="page-slider__desc">Оптимальный выбор для загородного дома и дачи!</div>
+						</div>
+					</div>
+				</div>
+				<div class="page-slider__item">
+					<picture class="page-slider__image">
+						<img src="blocks/page-slider/images/slide2.jpg" alt="">
+					</picture>
+					<div class="page-slider__info">
+						<div class="page-slider__info-inner">
+							<div class="page-slider__name">Трехконтурные двери «Престиж» с пробивкой от от 25800 руб.</div>
+							<div class="page-slider__desc">Два замка Гардиан и комплект утепления в подарок!</div>
+						</div>
+					</div>
+				</div>
+				<div class="page-slider__item">
+					<picture class="page-slider__image">
+						<img src="blocks/page-slider/images/slide3.jpg" alt="">
+					</picture>
+					<div class="page-slider__info">
+						<div class="page-slider__info-inner">
+							<div class="page-slider__name">Сезонное предложение — дверь с терморазрывом<br>от <span class="color-green">26 000 руб.</span></div>
+							<div class="page-slider__desc">Оптимальный выбор для загородного дома и дачи!</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-content__heading">
+			<div class="page-container--fluid">
+			
+			</div>
+		</div>
+		<div class="page-container--fluid page-content__inner">
+			<section class="page-content__section">
+				<h1 class="ta-c">Металлические двери</h1>
+				<div class="sections-mp">
+					<div class="sections-mp__tabs">
+						<span class="sections-mp__tabs-item">По функциональному назначению</span>
+						<span class="sections-mp__tabs-item">По материалу отделки</span>
+						<span class="sections-mp__tabs-item">По конструкции</span>
+						<span class="sections-mp__tabs-item">По чему-то важному</span>
+					</div>
+					<div class="sections-mp__list-wr">
+						<div class="sections-mp__list">
+							<div class="sections-mp__item">
+								<a href="#" class="sections-mp__link">
+									<span class="sections-mp__label"></span>
+									<div class="sections-mp__image"><img src="blocks/sections-mp/images/door1.jpg" alt=""></div>
+									<div class="sections-mp__title">Акция</div>
+								</a>
+							</div>
+							<div class="sections-mp__item">
+								<a href="#" class="sections-mp__link">
+									<div class="sections-mp__image"><img src="blocks/sections-mp/images/door2.jpg" alt=""></div>
+									<div class="sections-mp__title">Элитные</div>
+								</a>
+							</div>
+							<div class="sections-mp__item">
+								<a href="#" class="sections-mp__link">
+									<div class="sections-mp__image"><img src="blocks/sections-mp/images/door3.jpg" alt=""></div>
+									<div class="sections-mp__title">В квартиру</div>
+								</a>
+							</div>
+							<div class="sections-mp__item">
+								<a href="#" class="sections-mp__link">
+									<div class="sections-mp__image"><img src="blocks/sections-mp/images/door4.jpg" alt=""></div>
+									<div class="sections-mp__title">Временные</div>
+								</a>
+							</div>
+							<div class="sections-mp__item">
+								<a href="#" class="sections-mp__link">
+									<div class="sections-mp__image"><img src="blocks/sections-mp/images/door5.jpg" alt=""></div>
+									<div class="sections-mp__title">Решетчатые</div>
+								</a>
+							</div>
+							<div class="sections-mp__item">
+								<a href="#" class="sections-mp__link">
+									<div class="sections-mp__image"><img src="blocks/sections-mp/images/door6.jpg" alt=""></div>
+									<div class="sections-mp__title">Для улицы</div>
+								</a>
+							</div>
+							<div class="sections-mp__item">
+								<a href="#" class="sections-mp__link">
+									<div class="sections-mp__image"><img src="blocks/sections-mp/images/door7.jpg" alt=""></div>
+									<div class="sections-mp__title">Для офиса</div>
+								</a>
+							</div>
+							<div class="sections-mp__item">
+								<a href="#" class="sections-mp__link">
+									<div class="sections-mp__image"><img src="blocks/sections-mp/images/door8.jpg" alt=""></div>
+									<div class="sections-mp__title">технические</div>
+								</a>
+							</div>
+						</div>
+						<div class="sections-mp__list">
+							<div class="sections-mp__item">
+								<a href="#" class="sections-mp__link">
+									<span class="sections-mp__label"></span>
+									<div class="sections-mp__image"><img src="blocks/sections-mp/images/door1.jpg" alt=""></div>
+									<div class="sections-mp__title">Акция</div>
+								</a>
+							</div>
+							<div class="sections-mp__item">
+								<a href="#" class="sections-mp__link">
+									<div class="sections-mp__image"><img src="blocks/sections-mp/images/door2.jpg" alt=""></div>
+									<div class="sections-mp__title">Элитные</div>
+								</a>
+							</div>
+						</div>
+						<div class="sections-mp__list">
+							<div class="sections-mp__item">
+								<a href="#" class="sections-mp__link">
+									<div class="sections-mp__image"><img src="blocks/sections-mp/images/door2.jpg" alt=""></div>
+									<div class="sections-mp__title">Элитные</div>
+								</a>
+							</div>
+							<div class="sections-mp__item">
+								<a href="#" class="sections-mp__link">
+									<div class="sections-mp__image"><img src="blocks/sections-mp/images/door3.jpg" alt=""></div>
+									<div class="sections-mp__title">В квартиру</div>
+								</a>
+							</div>
+							<div class="sections-mp__item">
+								<a href="#" class="sections-mp__link">
+									<div class="sections-mp__image"><img src="blocks/sections-mp/images/door8.jpg" alt=""></div>
+									<div class="sections-mp__title">технические</div>
+								</a>
+							</div>
+						</div>
+						<div class="sections-mp__list">
+							<div class="sections-mp__item">
+								<a href="#" class="sections-mp__link">
+									<div class="sections-mp__image"><img src="blocks/sections-mp/images/door7.jpg" alt=""></div>
+									<div class="sections-mp__title">Для офиса</div>
+								</a>
+							</div>
+							<div class="sections-mp__item">
+								<a href="#" class="sections-mp__link">
+									<div class="sections-mp__image"><img src="blocks/sections-mp/images/door8.jpg" alt=""></div>
+									<div class="sections-mp__title">технические</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+			<section class="page-content__section clearfix">
+				<div class="h1 ta-c">Металлические двери от производителя «Дельта-Сталь»</div>
+				<img src="images/doors-mp.png" alt="" class="content-image--left-top">
+				<p>Компания «Дельта-Сталь» является производителем металлоизделий, завод работает с 1993 года. Продажа осуществляется в Москве и Московской области. Также производится отправка готовых металлоконструкций и товаров в любой российский регион.</p>
+				<p class="fw-600">В каталоге интернет-магазина представлены:</p>
+				<ul class="ul-marker">
+					<li><a href="#">входные двери в квартиру и загородный дом</a></li>
+					<li>решетки на окна</li>
+					<li>гаражные ворота</li>
+					<li>металлические пандусы</li>
+					<li>лестницы для колодцев с площадками</li>
+					<li>крышки на колодцы</li>
+				</ul>
+			</section>
+			<section class="page-content__section">
+				<div class="h1 ta-c">Преимущества входных дверей «Дельта-Сталь»</div>
+				<div class="advantages">
+					<div class="advantages__item">
+						<div class="advantages__item-inner">
+							<div class="advantages__image"><img src="blocks/advantages/images/img1.svg" alt=""></div>
+							<div class="advantages__name">Гарантия качества! 25 лет на рынке</div>
+						</div>
+					</div>
+					<div class="advantages__item">
+						<div class="advantages__item-inner">
+							<div class="advantages__image"><img src="blocks/advantages/images/img2.svg" alt=""></div>
+							<div class="advantages__name">Низкие цены! Работаем без посредников</div>
+						</div>
+					</div>
+					<div class="advantages__item">
+						<div class="advantages__item-inner">
+							<div class="advantages__image"><img src="blocks/advantages/images/img3.svg" alt=""></div>
+							<div class="advantages__name">Быстрое изготовление точно в срок!</div>
+						</div>
+					</div>
+					<div class="advantages__item">
+						<div class="advantages__item-inner">
+							<div class="advantages__image"><img src="blocks/advantages/images/img4.svg" alt=""></div>
+							<div class="advantages__name">Возможно производство изделий на заказ</div>
+						</div>
+					</div>
+					<div class="advantages__item">
+						<div class="advantages__item-inner">
+							<div class="advantages__image"><img src="blocks/advantages/images/img5.svg" alt=""></div>
+							<div class="advantages__name">При заказе установки, доставка — бесплатно!</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page-content__section">
+				<div class="h1 ta-c">Схема сотрудничества</div>
+				<div class="stage-work">
+					<div class="stage-work__item">
+						<div class="stage-work__item-inner">
+							<div class="stage-work__image"><img src="blocks/stage-work/images/img1.png" alt=""></div>
+							<div class="stage-work__name">Звонок, консультация</div>
+						</div>
+					</div>
+					<div class="stage-work__item">
+						<div class="stage-work__item-inner">
+							<div class="stage-work__image"><img src="blocks/stage-work/images/img2.png" alt=""></div>
+							<div class="stage-work__name">Выезд замерщика</div>
+						</div>
+					</div>
+					<div class="stage-work__item">
+						<div class="stage-work__item-inner">
+							<div class="stage-work__image"><img src="blocks/stage-work/images/img3.png" alt=""></div>
+							<div class="stage-work__name">Договор и оплата</div>
+						</div>
+					</div>
+					<div class="stage-work__item">
+						<div class="stage-work__item-inner">
+							<div class="stage-work__image"><img src="blocks/stage-work/images/img4.png" alt=""></div>
+							<div class="stage-work__name">Изготовление</div>
+						</div>
+					</div>
+					<div class="stage-work__item">
+						<div class="stage-work__item-inner">
+							<div class="stage-work__image"><img src="blocks/stage-work/images/img5.png" alt=""></div>
+							<div class="stage-work__name">Доставка и установка</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="page-content__section">
+				<div class="h1 ta-c">Доставкаы</div>
+				<div class="delivery-sections">
+					<div class="delivery-sections__item">
+						<a href="#" class="delivery-sections__link">
+							<div class="delivery-sections__image">
+								<img src="blocks/delivery-sections/images/img1.svg " alt="">
+							</div>
+							<span class="delivery-sections__name">Доставка по Москве</span>
+						</a>
+					</div>
+					<div class="delivery-sections__item">
+						<a href="#" class="delivery-sections__link">
+							<div class="delivery-sections__image">
+								<img src="blocks/delivery-sections/images/img2.svg " alt="">
+							</div>
+							<span class="delivery-sections__name">Доставка по Московской области</span>
+						</a>
+					</div>
+					<div class="delivery-sections__item">
+						<a href="#" class="delivery-sections__link">
+							<div class="delivery-sections__image">
+								<img src="blocks/delivery-sections/images/img3.svg " alt="">
+							</div>
+							<span class="delivery-sections__name">Доставка по России</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<section class="page-content__section">
+				<div class="h1 ta-c">Новости</div>
+				<div class="last-news">
+					<div class="last-news__item">
+						<div class="last-news__item-inner">
+							<div class="last-news__image"><a href="#"><img src="blocks/last-news/images/img1.png" alt=""></a></div>
+							<div class="last-news__info">
+								<div class="last-news__date">30 августа 2019</div>
+								<div class="last-news__name">Изготовление правильного мангала</div>
+								<div class="last-news__detail"><a href="#">Подробнее</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="last-news__item">
+						<div class="last-news__item-inner">
+							<div class="last-news__image"><a href="#"><img src="blocks/last-news/images/img2.png" alt=""></a></div>
+							<div class="last-news__info">
+								<div class="last-news__date">30 августа 2019</div>
+								<div class="last-news__name">Изготовление правильного мангала</div>
+								<div class="last-news__detail"><a href="#">Подробнее</a></div>
+							</div>
+						</div>
+					</div>
+					<div class="last-news__item">
+						<div class="last-news__item-inner">
+							<div class="last-news__image"><a href="#"><img src="blocks/last-news/images/img3.png" alt=""></a></div>
+							<div class="last-news__info">
+								<div class="last-news__date">30 августа 2019</div>
+								<div class="last-news__name">Изготовление правильного мангала</div>
+								<div class="last-news__detail"><a href="#">Подробнее</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			
+		</div>
+		<div class="page-content__form">
+			<div class="order-consultation">
+				<div class="page-container--fluid order-consultation__inner">
+					<div class="order-consultation__form-wr">
+						<div class="order-consultation__title">Консультация и замер БЕСПЛАТНО!</div>
+						<form action="" class="consultation-form">
+							<div class="consultation-form__item">
+								<input type="text" class="consultation-form__field-text" placeholder="Введите ваш телефон">
+							</div>
+							<div class="consultation-form__item">
+								<input type="submit" value="Записаться сейчас" class="consultation-form__button">
+							</div>
+							<div class="consultation-form__item consultation-form__item--privacy-policy">
+								<label><input type="checkbox" class="order-consultation__checkbox" required checked> Согласен на обработку персональных данных</label>
+							</div>
+						</form>
+					</div>
+					<div class="order-consultation__image">
+						<img src="blocks/order-consultation/images/consultant.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="page-footer">
+		<div class="page-container--fluid page-footer__inner">
+			<div class="page-footer__menu">
+				<div class="footer-menu">
+					<ul class="footer-menu__list footer-menu__list--lvl1">
+						<li class="footer-menu__item footer-menu__item--lvl1">
+							<a href="#" class="footer-menu__link footer-menu__link--lvl1">Каталог</a>
+							<ul class="footer-menu__list footer-menu__list--lvl2">
+								<li class="footer-menu__item footer-menu__item--lvl2"><a href="#" class="footer-menu__link footer-menu__link--lvl2">Двери</a></li>
+								<li class="footer-menu__item footer-menu__item--lvl2"><a href="#" class="footer-menu__link footer-menu__link--lvl2">Решетки на окна</a></li>
+								<li class="footer-menu__item footer-menu__item--lvl2"><a href="#" class="footer-menu__link footer-menu__link--lvl2">Металлоконструкции</a></li>
+								<li class="footer-menu__item footer-menu__item--lvl2"><a href="#" class="footer-menu__link footer-menu__link--lvl2">Системы контроля доступа</a></li>
+							</ul>
+						</li>
+						<li class="footer-menu__item footer-menu__item--lvl1">
+							<a href="#" class="footer-menu__link footer-menu__link--lvl1">Услуги</a>
+							<ul class="footer-menu__list footer-menu__list--lvl2">
+								<li class="footer-menu__item footer-menu__item--lvl2"><a href="#" class="footer-menu__link footer-menu__link--lvl2">Установка</a></li>
+								<li class="footer-menu__item footer-menu__item--lvl2"><a href="#" class="footer-menu__link footer-menu__link--lvl2">Доставка</a></li>
+								<li class="footer-menu__item footer-menu__item--lvl2"><a href="#" class="footer-menu__link footer-menu__link--lvl2">Изготовление/Производство</a></li>
+							</ul>
+						</li>
+						<li class="footer-menu__item footer-menu__item--lvl1"><a href="#" class="footer-menu__link footer-menu__link--lvl1">Акции</a></li>
+						<li class="footer-menu__item footer-menu__item--lvl1"><a href="#" class="footer-menu__link footer-menu__link--lvl1">О компании</a></li>
+						<li class="footer-menu__item footer-menu__item--lvl1"><a href="#" class="footer-menu__link footer-menu__link--lvl1">Галерея</a></li>
+						<li class="footer-menu__item footer-menu__item--lvl1"><a href="#" class="footer-menu__link footer-menu__link--lvl1">Оплата</a></li>
+						<li class="footer-menu__item footer-menu__item--lvl1"><a href="#" class="footer-menu__link footer-menu__link--lvl1">Гарантия</a></li>
+						<li class="footer-menu__item footer-menu__item--lvl1"><a href="#" class="footer-menu__link footer-menu__link--lvl1">Контакты</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="page-footer__info">
+				<div class="page-footer__logo">
+					<div class="page-footer__logo-image"><img src="images/logo.svg" alt=""></div>
+					<div class="page-footer__slogan">Входные<br>металлические<br>двери и решетки</div>
+				</div>
+				<div class="page-footer__phone">
+					<div class="page-footer__phone-item">
+						<svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use></svg>
+						+7 (495) 777–88–87
+					</div>
+					<div class="page-footer__phone-item">
+						<svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use></svg>
+						+7 (495) 777–88–87
+					</div>
+					<div class="page-footer__phone-item"><a href="#">Мы вам перезвоним</a></div>
+				</div>
+				
+				<div class="page-footer__email">
+					<svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-email"></use></svg>
+					<a href="mailto:info@d-dveri.ru">info@d-dveri.ru</a>
+				</div>
+				<div class="page-footer__time-work">
+					<svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-timer"></use></svg>
+					Пн-Пт:  9:00 - 17:00
+				</div>
+				<div class="page-footer__address">
+					<svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-map-point"></use></svg>
+					г. Москва, ул. Таганская, д. 40, стр. 2
+				</div>
+				<div class="page-footer__social-media social-media">
+					<div class="social-media__item"><svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-vk"></use></svg></div>
+					<div class="social-media__item"><svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-fb"></use></svg></div>
+					<div class="social-media__item"><svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-instagram"></use></svg></div>
+				</div>
+				<div class="page-footer__copy-c">© «Дельта-Сталь» 1993-2020</div>
+			</div>
+		</div>
+	</footer>
 </div>
+
+<script src="libs/jquery/jquery-3.4.1.min.js"></script>
+<script src="script.js"></script>
+<script src="libs/slick/slick.min.js"></script>
+<script src="blocks/sections-mp/script.js"></script>
+<script src="blocks/page-slider/script.js"></script>
 </body>
 </html>

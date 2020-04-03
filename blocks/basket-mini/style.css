@@ -1,0 +1,46 @@
+.basket-mini {
+	font-size: 10px;
+	font-weight: 600;
+	width: 100%;
+}
+
+	.basket-mini__link {
+		background-color: var(--color-primary);
+		display: flex;
+		text-decoration: none;
+		transition: var(--transition);
+	}
+	
+		.basket-mini__link,
+		.basket-mini__link:hover,
+		.basket-mini__link:active {
+			color: #fff;
+		}
+		
+		.basket-mini__link:hover {
+			background: var(--color-primary--light);
+		}
+	
+		.basket-mini__icon {
+			align-items: center;
+			border-right: 1px solid var(--color-white--alpha);
+			display: flex;
+			height: 30px;
+			justify-content: center;
+			width: 30px;
+		}
+		
+			.basket-mini__icon .svg-icon {
+				fill: #fff;
+				height: 12px;
+				width: 15px;
+			}
+		
+		.basket-mini__info {
+			align-items: center;
+			display: flex;
+			flex-grow: 1;
+			justify-content: center;
+			padding: 0 10px;
+			text-align: center;
+		}

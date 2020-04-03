@@ -1,0 +1,33 @@
+.search-header {
+	font-size: 10px;
+	position: relative;
+}
+
+	.search-header__input {
+		background: #fff;
+		border: 1px solid var(--color-primary);
+		height: 30px;
+		padding: 0 44px 0 10px;
+		width: 100%;
+	}
+	
+	.search-header__button {
+		align-items: center;
+		background: none;
+		border: none;
+		cursor: pointer;
+		display: flex;
+		height: 100%;
+		justify-content: center;
+		padding: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 34px;
+	}
+	
+		.search-header__button .svg-icon {
+			fill: var(--color-primary);
+			height: 11px;
+			width: 10px;
+		}

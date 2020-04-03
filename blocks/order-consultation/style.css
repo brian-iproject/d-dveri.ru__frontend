@@ -1,0 +1,73 @@
+.order-consultation {
+	background: var(--color-primary);
+	color: #fff;
+	padding: 44px 0;
+}
+
+	.order-consultation__inner {
+	}
+	
+		.order-consultation__form-wr {
+			flex-grow: 1;
+			margin-bottom: 20px;
+		}
+		
+			.order-consultation__title {
+				color: #fff;
+				font-size: 24px;
+				font-weight: 700;
+				margin-bottom: 36px;
+				text-align: center;
+				text-transform: uppercase;
+			}
+	
+		.order-consultation__image {
+			margin-bottom: -44px;
+			position: relative;
+		}
+		
+			.order-consultation__image img {
+				display: block;
+				max-width: 100%;
+			}
+
+@media (min-width: 768px) {
+	.order-consultation {
+		margin-top: 90px;
+	}
+	
+		.order-consultation__inner {
+			display: flex;
+		}
+		
+			.order-consultation__form-wr {
+				padding-right: 30px;
+			}
+			
+				.order-consultation__title {
+					text-align: left;
+				}
+	
+			.order-consultation__image {
+				flex: 0 0 400px;
+				max-width: 400px;
+			}
+	
+				.order-consultation__image img {
+					bottom: 0;
+					left: 0;
+					position: absolute;
+				}
+}
+
+@media (min-width: 1200px) {
+	.order-consultation {
+		margin-top: 194px;
+	}
+	
+		.order-consultation__form {
+			display: flex;
+		}
+		
+			.order-consultation__item
+}
