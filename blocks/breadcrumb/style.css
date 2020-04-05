@@ -1,0 +1,33 @@
+.breadcrumb {
+	color: var(--color-gray--dark);
+	font-size: var(--font-size--small);
+}
+
+	.breadcrumb__list {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+		.breadcrumb__item {
+			margin-right: 6px;
+		}
+
+			.breadcrumb__item + .breadcrumb__item:before {
+				content: '/';
+				display: inline-block;
+				float: left;
+				margin-right: 6px;
+			}
+		
+			.breadcrumb__link {
+				color: var(--color-gray--dark);
+				text-decoration: none;
+			}
+			
+				.breadcrumb__link:hover,
+				.breadcrumb__link:active,
+				.breadcrumb__link--selected {
+					color: var(--color-black);
+				}

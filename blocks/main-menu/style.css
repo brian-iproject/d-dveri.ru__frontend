@@ -17,12 +17,8 @@
 		
 		.main-menu__list--lvl2 {
 			display: none;
+			padding: 15px 20px;
 		}
-
-			.main-menu__item--wide .main-menu__list--lvl2 {
-				padding: 45px 50px;
-				width: 100%;
-			}
 		
 			.main-menu__item--parent:hover .main-menu__list--lvl2 {
 				background: #fff;
@@ -30,10 +26,14 @@
 				box-shadow: var(--box-shadow);
 				display: block;
 				left: 0;
-				padding: 15px 20px;
 				position: absolute;
 				top: 100%;
 				z-index: 5;
+			}
+
+			.main-menu__item--wide .main-menu__list--lvl2 {
+				padding: 45px 50px;
+				width: 100%;
 			}
 			
 		.main-menu__list--lvl3 {
@@ -57,7 +57,7 @@
 				}
 		
 				.main-menu__item--lvl1 + .main-menu__item--lvl1 {
-					border-left: 1px solid var(--color-white--alpha);
+					border-left: 1px solid rgba(255, 255, 255, .5);
 				}
 				
 			.main-menu__item--lvl2 {

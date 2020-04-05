@@ -1,4 +1,6 @@
 .page-slider {
+	height: 433px;
+	overflow: hidden;
 }
 
 	.page-slider__item {
@@ -47,6 +49,52 @@
 			
 			.page-slider__desc {
 				font-size: 16px;
+			}
+			
+	.page-slider__dots {
+		bottom: 30px;
+		display: flex;
+		justify-content: center;
+		left: 0;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		right: 0;
+	}
+	
+		.page-slider__dots li {
+			border: 1px solid transparent;
+			border-radius: 50%;
+			margin: 0 4px;
+			padding: 1px;
+			transition: var(--transition);
+		}
+
+			.page-slider__dots li:hover,
+			.page-slider__dots li.slick-active {
+				background-color: rgba(255, 255, 255, .3);
+				border-color: #fff;
+			}
+		
+			.page-slider__dots li button {
+				background-color: rgba(255, 255, 255, 1);
+				border: none;
+				border-radius: 50%;
+				cursor: pointer;
+				display: block;
+				font-size: 0;
+				height: 11px;
+				margin: 0;
+				outline: none;
+				padding: 0;
+				transition: var(--transition);
+				width: 11px;
+			}
+		
+			.page-slider__dots li:hover button,
+			.page-slider__dots li.slick-active button {
+				background-color: rgba(255, 255, 255, .3);
 			}
 
 @media (min-width: 768px) {

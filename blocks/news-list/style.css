@@ -1,49 +1,46 @@
-.last-news {
+.news-list {
+	margin: 0 -15px -30px -15px;
 }
 
-	.last-news__item {
-		margin: 0 auto;
+	.news-list__item {
+		margin: 0 auto 30px auto;
 		max-width: 358px;
 		padding: 0 15px;
 	}
 	
-		.last-news__item + .last-news__item {
-			margin-top: 30px;
-		}
-	
-		.last-news__item-inner {
+		.news-list__item-inner {
 			transition: var(--transition);
 		}
 		
-			.last-news__item-inner:hover {
+			.news-list__item-inner:hover {
 				box-shadow: 4px 10px 29px rgba(0, 0, 0, 0.12);
 			}
 		
-			.last-news__image {
+			.news-list__image {
 			}
 			
-				.last-news__image img {
+				.news-list__image img {
 					display: block;
 					margin: 0 auto;
 					max-width: 100%;
 				}
 				
-			.last-news__info {
+			.news-list__info {
 				border: 1px solid var(--color-gray);
 				border-top: none;
 				padding: 18px 24px 30px 24px;
 			}
 			
-			.last-news__date {
+			.news-list__date {
 				color: var(--color-secondary);
 				font-size: var(--font-size--middle);
 			}
 			
-			.last-news__name {
+			.news-list__name {
 				margin-top: 15px;
 			}
 			
-			.last-news__detail {
+			.news-list__detail {
 				border-top: 1px solid var(--color-secondary);
 				font-size: var(--font-size--middle);
 				margin-top: 24px;
@@ -51,28 +48,48 @@
 				text-transform: uppercase;
 			}
 			
-				.last-news__detail a {
+				.news-list__detail a {
 					color: var(--color-secondary);
 					text-decoration: none;
 				}
 
-					.last-news__detail a:hover,
-					.last-news__detail a:active {
+					.news-list__detail a:hover,
+					.news-list__detail a:active {
 						color: var(--color-primary);
 					}
 
 
 @media (min-width: 768px) {
-	.last-news {
+	.news-list {
+		align-items: stretch;
 		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
 	}
 	
-		.last-news__item {
+		.news-list__item {
 			flex: 0 0 33.3333%;
+			margin: 0 0 30px 0;
 			max-width: 33.3333%;
 		}
 	
-			.last-news__item + .last-news__item {
+			.news-list__item + .news-list__item {
 				margin-top: 0;
 			}
+			
+			.news-list__item-inner {
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+			}
+			
+				.news-list__info {
+					display: flex;
+					flex-direction: column;
+					flex-grow: 1;
+				}
+				
+					.news-list__name {
+						flex-grow: 1;
+					}
 }

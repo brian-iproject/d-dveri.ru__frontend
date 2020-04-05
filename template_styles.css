@@ -92,17 +92,7 @@ body {
 			}
 		
 			.page-header__messengers {
-				display: flex;
 			}
-			
-				.page-header__messengers .svg-image {
-					height: 21px;
-					width: 21px;
-				}
-
-					.page-header__messengers .svg-image + .svg-image {
-						margin-left: 10px;
-					}
 			
 	.page-header__bottom {
 		background: var(--color-gray--light);
@@ -178,8 +168,8 @@ body {
 }
 
 	.page-content__section {
-		padding-bottom: 40px;
-		padding-top: 40px;
+		padding-bottom: 45px;
+		padding-top: 45px;
 	}
 	
 		.page-content__section:first-child {
@@ -192,9 +182,15 @@ body {
 	
 	.page-content__heading {
 		background: var(--color-gray--light);
+		padding: 10px 0 44px 0;
 	}
 	
+		.page-content__title {
+			margin: 12px 0 0 0;
+		}
+	
 	.page-content__inner {
+		padding-bottom: 80px;
 		padding-top: 50px;
 	}
 
@@ -261,7 +257,7 @@ body {
 					
 					.page-footer__phone-item a {
 						color: #fff;
-						text-decoration-color: var(--color-white--alpha);
+						text-decoration-color: rgba(255, 255, 255, .5);
 					}
 
 					.page-footer__phone-item a:hover,
@@ -276,7 +272,7 @@ body {
 
 				.page-footer__email a {
 					color: #fff;
-					text-decoration-color: var(--color-white--alpha);
+					text-decoration-color: rgba(255, 255, 255, .5);
 				}
 				
 				.page-footer__email a:hover,

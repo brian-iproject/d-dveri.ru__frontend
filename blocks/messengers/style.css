@@ -1,0 +1,22 @@
+.messengers {
+	display: flex;
+}
+
+	.messengers__link {
+		text-decoration: none;
+		display: block;
+		transition: var(--transition);
+	}
+	
+		.messengers__link + .messengers__link {
+			margin-left: 10px;
+		}
+	
+		.messengers__link:hover {
+			transform: scale(1.1);
+		}
+
+	.messengers .svg-image {
+		height: 21px;
+		width: 21px;
+	}

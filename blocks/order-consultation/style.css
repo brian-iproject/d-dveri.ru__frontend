@@ -33,7 +33,7 @@
 
 @media (min-width: 768px) {
 	.order-consultation {
-		margin-top: 90px;
+		margin-top: 10px;
 	}
 	
 		.order-consultation__inner {
@@ -60,14 +60,18 @@
 				}
 }
 
+@media (min-width: 992px) {
+	.order-consultation {
+		margin-top: 36px;
+	}
+}
+
 @media (min-width: 1200px) {
 	.order-consultation {
-		margin-top: 194px;
+		margin-top: 120px;
 	}
 	
 		.order-consultation__form {
 			display: flex;
 		}
-		
-			.order-consultation__item
 }

@@ -1,0 +1,62 @@
+.colors-list {
+}
+
+	.colors-list__item {
+		align-items: center;
+		display: flex;
+	}
+	
+		.colors-list__item + .colors-list__item {
+			margin-top: 30px;
+		}
+		
+			.colors-list__color {
+				border-radius: 50%;
+				color: #fff;
+				display: block;
+				flex: 0 0 100px;
+				height: 100px;
+				margin-right: 15px;
+				width: 100px;
+			}
+			
+			.colors-list__text {
+				color: var(--color-gray--dark);
+				font-size: var(--font-size--small);
+			}
+			
+				.colors-list__text p {
+					margin: 0;
+				}
+				
+					.colors-list__text p + p {
+						margin-top: .2em;
+					}
+					
+.image-positions {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 30px -15px;
+}
+
+	.image-positions__item {
+		flex: 0 0 200px;
+		margin-bottom: 30px;
+		max-width: 200px;
+		padding: 0 15px;
+	}
+	
+	.image-positions__image {
+		margin-bottom: 15px;
+	}
+	
+		.image-positions__image img {
+			display: block;
+			max-width: 100%;
+		}
+	
+	.image-positions__caption {
+		color: var(--color-gray--dark);
+		font-size: var(--font-size--small);
+		text-align: center;
+	}
