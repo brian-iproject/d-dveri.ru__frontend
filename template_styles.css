@@ -193,6 +193,10 @@ body {
 		padding-bottom: 80px;
 		padding-top: 50px;
 	}
+	
+		.page-content__inner :first-child {
+			margin-top: 0;
+		}
 
 .page-footer {
 	background: var(--color-black);

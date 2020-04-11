@@ -1,4 +1,5 @@
 :root {
+	--font-size--large: 18px;
 	--font-size: 16px;
 	--font-size--middle: 14px;
 	--font-size--small: 12px;
@@ -20,6 +21,7 @@
 
 @media (min-width: 768px) {
 	:root {
+		--font-size--large: 20px;
 		--font-size: 18px;
 		--font-size--middle: 16px;
 		--font-size--small: 14px;
@@ -38,15 +40,14 @@ h1,
 	color: var(--color-black);
 	font-size: 20px;
 	font-weight: 700;
-	margin: 1.5em 0;
-	position: relative;
+	margin: 2em 0 1.5em 0;
 }
 
 h2,
 .h2 {
 	font-size: 18px;
 	font-weight: 700;
-	margin: 1.5em 0;
+	margin: 2em 0 1.5em 0;
 	padding: 0;
 }
 
@@ -54,7 +55,15 @@ h3,
 .h3 {
 	font-size: 16px;
 	font-weight: 700;
-	margin: 1.5em 0;
+	margin: 2em 0 1.5em 0;
+	padding: 0;
+}
+
+h4,
+.h4 {
+	font-size: 14px;
+	font-weight: 700;
+	margin: 2em 0 1.5em 0;
 	padding: 0;
 }
 
@@ -78,6 +87,11 @@ h3:first-child, .h3:first-child {
 	h3,
 	.h3 {
 		font-size: 20px;
+	}
+	
+	h4,
+	.h4 {
+		font-size: 16px;
 	}
 }
 
@@ -249,6 +263,68 @@ img {
 			top: 0;
 		}
 
+.quote {
+	border: 3px solid var(--color-primary);
+	color: var(--color-primary);
+	font-size: var(--font-size--large);
+	font-weight: 600;
+	margin: 1.5em 0;
+	padding: 2em;
+	position: relative;
+	text-align: center;
+}
+
+	.quote:before {
+		background: #fff;
+		content: "“";
+		font-size: 7em;
+		height: .25em;
+		left: 0;
+		line-height: 0.66em;
+		padding-left: .2em;
+		padding-right: .2em;
+		position: absolute;
+		top: -.03em;
+	}
+
+	.quote:after {
+		background: #fff;
+		bottom: -.03em;
+		content: "“";
+		font-size: 7em;
+		height: .25em;
+		line-height: 0.66em;
+		padding-left: .2em;
+		padding-right: .2em;
+		position: absolute;
+		right: 0;
+	}
+	
+.warning {
+	border: 3px solid var(--color-primary);
+	color: var(--color-primary);
+	font-size: var(--font-size--large);
+	font-weight: 600;
+	margin: 3em 0 1.5em 0;
+	padding: 2em;
+	position: relative;
+	text-align: center;
+}
+
+	.warning:before {
+		background: #fff;
+		border: 3px solid var(--color-primary);
+		border-radius: 50%;
+		content: '¡';
+		font-size: 2em;
+		height: 1.5em;
+		left: 50%;
+		margin-left: -.75em;
+		position: absolute;
+		top: -.75em;
+		width: 1.5em;
+	}
+
 .svg-icon {
 	display: inline-block;
 	fill-rule: evenodd;
@@ -387,4 +463,80 @@ img {
 			.two-column__column + .two-column__column {
 				margin-top: 0;
 			}
+}
+
+.table {
+	font-size: var(--font-size--middle);
+	margin: 1.7em 0;
+	position: relative;
+}
+
+	.table__container {
+		max-width: 100%;
+		overflow: auto;
+	}
+
+		.table__table {
+			border: 0;
+			border-collapse: separate;
+			border-spacing: 2px;
+			margin: 0 -2px;
+			table-layout: fixed;
+			width: 100%;
+		}
+		
+			.table__row-heading,
+			.table__row-heading td,
+			.table__row-heading th {
+				background: var(--color-primary--light);
+				color: #fff;
+			}
+
+			.table__table td,
+			.table__table th {
+				font-weight: normal;
+				padding: 10px 24px;
+				text-align: left;
+			}
+
+			.table__table thead td,
+			.table__table thead th {
+				background: var(--color-primary);
+				color: #fff;
+			}
+
+			.table__table tbody tr:nth-child(even):not(.table__row-heading) td,
+			.table__table tbody tr:nth-child(even):not(.table__row-heading) th {
+				background: var(--color-gray);
+			}
+
+			.table__table tbody tr:nth-child(odd):not(.table__row-heading) td,
+			.table__table tbody tr:nth-child(odd):not(.table__row-heading) th {
+				background: var(--color-gray--light);
+			}
+
+@media (max-width: 767px) {
+	.table__table {
+		table-layout: auto;
+	}
+	
+		.table::before,
+		.table::after {
+			color: #c9c9c9;
+			content: '← Используйте горизонтальную прокрутку →';
+			display: block;
+			font-size: 13px;
+			margin: 8px 0;
+			text-align: center;
+		}
+
+		.table__container:after {
+			box-shadow: 0 0 100px 35px #fff;
+			content: '';
+			display: block;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
 }

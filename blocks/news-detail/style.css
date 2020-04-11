@@ -1,0 +1,32 @@
+.news-detail {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 35px;
+	overflow: hidden;
+}
+
+	.news-detail__image {
+		margin-top: 30px;
+		order: 1;
+	}
+	
+	.news-detail__info {
+	}
+	
+		.news-detail__date {
+			color: var(--color-secondary);
+			font-size: var(--font-size--middle);
+			margin-bottom: 1.5em;
+		}
+
+@media (min-width: 768px) {
+	.news-detail {
+		display: block;
+	}
+	
+		.news-detail__image {
+			float: left;
+			margin: 0 15px 15px 0;
+			max-width: 50%;
+		}
+}

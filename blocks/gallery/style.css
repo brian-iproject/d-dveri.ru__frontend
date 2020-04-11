@@ -1,99 +1,78 @@
-.news-list {
+.gallery {
 	margin: 0 -15px -30px -15px;
 }
 
-	.news-list__item {
+	.gallery__item {
 		margin: 0 auto 30px auto;
 		max-width: 358px;
 		padding: 0 15px;
 	}
 	
-		.news-list__item-inner {
+		.gallery__item-inner {
 			color: var(--color-black);
 			display: block;
 			text-decoration: none;
 			transition: var(--transition);
 		}
 		
-			.news-list__item-inner:hover {
+			.gallery__item-inner:hover,
+			.gallery__item-inner:active {
 				box-shadow: 4px 10px 29px rgba(0, 0, 0, 0.12);
 				color: var(--color-primary);
 			}
 		
-			.news-list__image {
+			.gallery__image {
 			}
 			
-				.news-list__image img {
+				.gallery__image img {
 					display: block;
 					margin: 0 auto;
 					max-width: 100%;
 				}
 				
-			.news-list__info {
+			.gallery__info {
 				border: 1px solid var(--color-gray);
 				border-top: none;
 				padding: 18px 24px 30px 24px;
 			}
 			
-			.news-list__date {
-				color: var(--color-secondary);
-				font-size: var(--font-size--middle);
-			}
-			
-			.news-list__name {
+			.gallery__name {
+				font-weight: 600;
 				margin-top: 15px;
+				text-align: center;
 			}
-			
-			.news-list__detail {
-				border-top: 1px solid var(--color-secondary);
-				font-size: var(--font-size--middle);
-				margin-top: 24px;
-				padding-top: 18px;
-				text-transform: uppercase;
-			}
-			
-				.news-list__detail a {
-					color: var(--color-secondary);
-					text-decoration: none;
-				}
-
-					.news-list__detail a:hover,
-					.news-list__detail a:active {
-						color: var(--color-primary);
-					}
-
 
 @media (min-width: 768px) {
-	.news-list {
+	.gallery {
 		align-items: stretch;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: flex-start;
 	}
 	
-		.news-list__item {
+		.gallery__item {
 			flex: 0 0 33.3333%;
 			margin: 0 0 30px 0;
 			max-width: 33.3333%;
 		}
 	
-			.news-list__item + .news-list__item {
+			.gallery__item + .gallery__item {
 				margin-top: 0;
 			}
 			
-			.news-list__item-inner {
+			.gallery__item-inner {
 				display: flex;
 				flex-direction: column;
 				height: 100%;
 			}
 			
-				.news-list__info {
+				.gallery__info {
 					display: flex;
 					flex-direction: column;
 					flex-grow: 1;
 				}
 				
-					.news-list__name {
+					.gallery__name {
 						flex-grow: 1;
 					}
 }
