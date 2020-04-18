@@ -37,8 +37,6 @@ class Tabs {
      * @param index
      */
     openTab(index) {
-        console.log(index);
-
         const tabActive = this.tabContainer.querySelector('.--is-active');
         const tabPanelActive = this.tabPanelContainer.querySelector('.--is-active');
 
@@ -73,22 +71,21 @@ const app = {
     /**
      * Переключалка мобильного меню
      */
-    mobileMenuToggle: function() {
+    burgerToggle: function() {
         const navBlock = document.querySelector('.js-nav');
         const body = document.querySelector('body');
         document.addEventListener('click', function (e) {
             if (e.target.closest('.js-burger')) {
                 navBlock.classList.toggle('--is-active');
-                body.classList.toggle('body--noscroll');
+                body.classList.toggle('--no-scroll');
             }
         });
     },
 
     init: function() {
-        this.mobileMenuToggle();
+        this.burgerToggle();
         //this.svgLoad();
     }
 };
 
 app.init();
-

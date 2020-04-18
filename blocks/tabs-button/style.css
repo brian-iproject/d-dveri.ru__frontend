@@ -1,8 +1,8 @@
-.news-sections {
+.tabs-button {
 	margin: -10px 0 30px 0;
 }
 
-	.news-sections__item {
+	.tabs-button__item {
 		border: 1px solid var(--color-primary);
 		color: var(--color-primary);
 		cursor: pointer;
@@ -15,30 +15,30 @@
 		margin-top: 10px;
 	}
 		
-		.news-sections__item:hover,
-		.news-sections__item:active,
-		.news-sections__item.--is-active {
+		.tabs-button__item:hover,
+		.tabs-button__item:active,
+		.tabs-button__item.--is-active {
 			background: var(--color-primary);
 			color: #fff;
 		}
 		
 		
 @media (min-width: 768px) {
-	.news-sections {
+	.tabs-button {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: left;
 		margin: -10px -8px 30px -8px;
 	}
 	
-		.news-sections__item {
+		.tabs-button__item {
 			margin-left: 8px;
 			margin-right: 8px;
 		}
 }
 
 @media (min-width: 1200px) {
-	.news-sections {
+	.tabs-button {
 		justify-content: center;
 	}
 }

@@ -28,7 +28,7 @@
 				content: counters(item,".");
 				counter-increment: item;
 				display: flex;
-				font-size: 14px;
+				font-size: var(--font-size--small);
 				font-weight: 700;
 				height: 27px;
 				justify-content: center;
@@ -50,7 +50,7 @@
 				}
 			
 			.stage-work__name {
-				font-size: 14px;
+				font-size: var(--font-size--middle);
 				font-weight: 600;
 			}
 

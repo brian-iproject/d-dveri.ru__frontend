@@ -35,8 +35,9 @@
 	<link href="blocks/breadcrumb/style.css" rel="stylesheet" type="text/css">
 	<link href="blocks/style-guide/style.css" rel="stylesheet" type="text/css">
 	<link href="blocks/news-detail/style.css" rel="stylesheet" type="text/css">
-	<link href="blocks/gallery/style.css" rel="stylesheet" type="text/css">
+	<link href="blocks/tile-sections/style.css" rel="stylesheet" type="text/css">
 	<link href="blocks/certificates/style.css" rel="stylesheet" type="text/css">
+	<link href="blocks/tabs-button/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div style="display: none">
@@ -144,7 +145,7 @@
 					</div>
 					<div class="page-header__phone-item"><a href="#">Мы вам перезвоним</a></div>
 				</div>
-				<div class="page-header__search-desktop">
+				<div class="page-header__search">
 					<div class="search-header">
 						<label>
 							<input type="text" class="search-header__input" placeholder="Поиск">
@@ -153,110 +154,205 @@
 					</div>
 				</div>
 			</div>
-			<nav class="page-container--fluid page-header__nav">
-				<div class="page-header__nav-inner">
-					<div class="page-header__menu">
-						<div class="main-menu">
-							<ul class="main-menu__list main-menu__list--lvl1">
-								<li class="main-menu__item main-menu__item--lvl1 main-menu__item--parent main-menu__item--wide">
-									<a href="#" class="main-menu__link main-menu__link--lvl1 main-menu__link--parent">Каталог</a>
-									<ul class="main-menu__list main-menu__list--lvl2">
-										<li class="main-menu__item main-menu__item--lvl2">
-											<a href="#" class="main-menu__link main-menu__link--lvl2">Двери</a>
-											<ul class="main-menu__list main-menu__list--lvl3">
-												<li class="main-menu__item main-menu__item--lvl3 main-menu__item--parent">
-													<a href="#" class="main-menu__link main-menu__link--lvl3">По назначению</a>
-													<ul class="main-menu__list main-menu__list--lvl4">
-														<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">в квартиру</a></li>
-														<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">тамбурные</a></li>
-														<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">для подъезда</a></li>
-														<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">временные</a></li>
-														<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">с теплоизоляцией</a></li>
-														<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">тамбурные</a></li>
-														<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">для офиса</a></li>
-													</ul>
-												</li>
-												<li class="main-menu__item main-menu__item--lvl3 main-menu__item--parent">
-													<a href="#" class="main-menu__link main-menu__link--lvl3">По материалу отделки</a>
-													<ul class="main-menu__list main-menu__list--lvl4">
-														<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С порошковым напылением</a></li>
-														<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С краской Hammerite</a></li>
-														<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Винорит</a></li>
-														<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">МДФ</a></li>
-														<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С краской грунт-эмаль «3 в 1»</a></li>
-														<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">с фотопленкой</a></li>
-														<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">массив</a></li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-										<li class="main-menu__item main-menu__item--lvl2">
-											<a href="#" class="main-menu__link main-menu__link--lvl2">Решетки на окна</a>
-											<ul class="main-menu__list main-menu__list--lvl3">
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Сварные</a></li>
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Кованные</a></li>
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Дутые</a></li>
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">для дачи</a></li>
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">для цветов</a></li>
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">на половину окна</a></li>
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">ажурные</a></li>
-											</ul>
-										</li>
-										<li class="main-menu__item main-menu__item--lvl2">
-											<a href="#" class="main-menu__link main-menu__link--lvl2">Системы контроля доступа</a>
-											<ul class="main-menu__list main-menu__list--lvl3">
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Сварные</a></li>
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Кованные</a></li>
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Дутые</a></li>
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">для дачи</a></li>
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">для цветов</a></li>
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">на половину окна</a></li>
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">ажурные</a></li>
-											</ul>
-										</li>
-										<li class="main-menu__item main-menu__item--lvl2">
-											<a href="#" class="main-menu__link main-menu__link--lvl2">Решетки на окна</a>
-											<ul class="main-menu__list main-menu__list--lvl3">
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Сварные</a></li>
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Кованные</a></li>
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Дутые</a></li>
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">для дачи</a></li>
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">для цветов</a></li>
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">на половину окна</a></li>
-												<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">ажурные</a></li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-								<li class="main-menu__item main-menu__item--lvl1 main-menu__item--parent">
-									<a href="#" class="main-menu__link main-menu__link--lvl1">Услуги</a>
-									<ul class="main-menu__list main-menu__list--lvl2">
-										<li class="main-menu__item main-menu__item--lvl2"><a href="#" class="main-menu__link main-menu__link--lvl2">Установка</a></li>
-										<li class="main-menu__item main-menu__item--lvl2"><a href="#" class="main-menu__link main-menu__link--lvl2">Доставка</a></li>
-										<li class="main-menu__item main-menu__item--lvl2"><a href="#" class="main-menu__link main-menu__link--lvl2">Изготовление/Производство</a></li>
-									</ul>
-								</li>
-								<li class="main-menu__item main-menu__item--lvl1"><a href="#" class="main-menu__link main-menu__link--lvl1">Акции</a></li>
-								<li class="main-menu__item main-menu__item--lvl1"><a href="#" class="main-menu__link main-menu__link--lvl1">О компании</a></li>
-								<li class="main-menu__item main-menu__item--lvl1"><a href="#" class="main-menu__link main-menu__link--lvl1">Галерея</a></li>
-								<li class="main-menu__item main-menu__item--lvl1"><a href="#" class="main-menu__link main-menu__link--lvl1">Оплата</a></li>
-								<li class="main-menu__item main-menu__item--lvl1"><a href="#" class="main-menu__link main-menu__link--lvl1">Гарантия</a></li>
-								<li class="main-menu__item main-menu__item--lvl1"><a href="#" class="main-menu__link main-menu__link--lvl1">Контакты</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="page-header__search-mobile">
-						<div class="search-header">
-							<label>
-								<input type="text" class="search-header__input" placeholder="Поиск">
-							</label>
-							<button class="search-header__button"><svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-loupe"></use></svg></button>
-						</div>
-					</div>
-				</div>
-			</nav>
 		</div>
 	</header>
+	<nav class="page-nav">
+		<div class="page-container--fluid page-nav__inner">
+			<div class="page-nav__burger">
+				<button class="page-nav__burger-button js-burger"><span></span></button>
+			</div>
+			<div class="page-nav__menu js-nav">
+				<button class="page-nav__close js-burger"></button>
+				<div class="page-nav__menu-inner">
+					<div class="page-nav__phone">
+						<div class="page-nav__phone-item">
+							<svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use></svg>
+							<a href="tel:+74957778887">+7 (495) 777–88–87</a>
+						</div>
+						<div class="page-nav__phone-item">
+							<svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-phone"></use></svg>
+							<a href="tel:+74957778887">+7 (495) 777–88–87</a>
+						</div>
+						<div class="page-nav__phone-item"><a href="#">Мы вам перезвоним</a></div>
+					</div>
+					<div class="main-menu">
+						<ul class="main-menu__list main-menu__list--lvl1">
+							<li class="main-menu__item main-menu__item--lvl1 main-menu__item--parent main-menu__item--wide">
+								<button class="main-menu__dropdown"></button>
+								<a href="#" class="main-menu__link main-menu__link--lvl1 main-menu__link--parent">Каталог</a>
+								<ul class="main-menu__list main-menu__list--lvl2">
+									<li class="main-menu__item main-menu__item--lvl2 main-menu__item--parent">
+										<button class="main-menu__dropdown"></button>
+										<img src="blocks/main-menu/images/img1.svg" alt="" class="main-menu__icon">
+										<a href="#" class="main-menu__link main-menu__link--lvl2">Двери</a>
+										<ul class="main-menu__list main-menu__list--lvl3">
+											<li class="main-menu__item main-menu__item--lvl3 main-menu__item--parent">
+												<button class="main-menu__dropdown"></button>
+												<a href="#" class="main-menu__link main-menu__link--lvl3">Место установки</a>
+												<ul class="main-menu__list main-menu__list--lvl4">
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">В дом</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">В квартиру</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">В коттедж</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Для офиса</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Для подъезда</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Для улицы</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">На дачу</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Тамбурные</a></li>
+												</ul>
+											</li>
+											<li class="main-menu__item main-menu__item--lvl3 main-menu__item--parent">
+												<button class="main-menu__dropdown"></button>
+												<a href="#" class="main-menu__link main-menu__link--lvl3">По материалу отделки</a>
+												<ul class="main-menu__list main-menu__list--lvl4">
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Антивандальные</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Массив дерева</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">МДФ</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">МДФ эконом</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С винилискожей</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С евровагонкой</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С зеркалом</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С ковкой и литьём</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С краской Hammerite</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С краской грунт эмаль</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С металлофиленкой</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С порошковым напылением</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С рисунком на металле</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С фотопанелью</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Со стеклом</a></li>
+												</ul>
+											</li>
+											<li class="main-menu__item main-menu__item--lvl3 main-menu__item--parent">
+												<button class="main-menu__dropdown"></button>
+												<a href="#" class="main-menu__link main-menu__link--lvl3">По назначению</a>
+												<ul class="main-menu__list main-menu__list--lvl4">
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Временные</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Противопожарные</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С вентиляцией</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С теплоизоляцией</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С шумоизоляцией</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Технические</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Усиленные</a></li>
+												</ul>
+											</li>
+											<li class="main-menu__item main-menu__item--lvl3 main-menu__item--parent">
+												<button class="main-menu__dropdown"></button>
+												<a href="#" class="main-menu__link main-menu__link--lvl3">Конструкция</a>
+												<ul class="main-menu__list main-menu__list--lvl4">
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Двустворчатые</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Открывающиеся во внутрь</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Решетчатые</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">С окошком для животных</a></li>
+												</ul>
+											</li>
+											<li class="main-menu__item main-menu__item--lvl3 main-menu__item--parent">
+												<button class="main-menu__dropdown"></button>
+												<a href="#" class="main-menu__link main-menu__link--lvl3">Ценовая категория</a>
+												<ul class="main-menu__list main-menu__list--lvl4">
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Эконом</a></li>
+													<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Элитные</a></li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li class="main-menu__item main-menu__item--lvl2 main-menu__item--parent">
+										<button class="main-menu__dropdown"></button>
+										<img src="blocks/main-menu/images/img3.svg" alt="" class="main-menu__icon">
+										<a href="#" class="main-menu__link main-menu__link--lvl2">Решетки на окна</a>
+										<ul class="main-menu__list main-menu__list--lvl3">
+											<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">VIP</a></li>
+											<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Ажурные</a></li>
+											<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Внутренние</a></li>
+											<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Для дачи</a></li>
+											<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Для приямков</a></li>
+											<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Для цветов</a></li>
+											<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Дутые</a></li>
+											<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Кованые</a></li>
+											<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">На балкон</a></li>
+											<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">На лоджию</a></li>
+											<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">На половину окна</a></li>
+											<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">На цокольный этаж</a></li>
+											<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Накладные</a></li>
+											<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Общий прайс-лист</a></li>
+											<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Простые</a></li>
+											<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Распашные</a></li>
+											<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Сварные</a></li>
+											<li class="main-menu__item main-menu__item--lvl4"><a href="#" class="main-menu__link main-menu__link--lvl4">Современные</a></li>
+										</ul>
+									</li>
+									<li class="main-menu__item main-menu__item--lvl2 main-menu__item--parent">
+										<button class="main-menu__dropdown"></button>
+										<img src="blocks/main-menu/images/img7.svg" alt="" class="main-menu__icon">
+										<a href="#" class="main-menu__link main-menu__link--lvl2">Арки для сада</a>
+										<ul class="main-menu__list main-menu__list--lvl3">
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Белые</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Для вьющихся растений</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Кованые</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">На заказ</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Со скидкой</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Шпаллеры</a></li>
+										</ul>
+									</li>
+									<li class="main-menu__item main-menu__item--lvl2 main-menu__item--parent">
+										<button class="main-menu__dropdown"></button>
+										<img src="blocks/main-menu/images/img2.svg" alt="" class="main-menu__icon">
+										<a href="#" class="main-menu__link main-menu__link--lvl2">Металлоконструкции</a>
+										<ul class="main-menu__list main-menu__list--lvl3">
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Гаражные ворота</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Защитно-улавливающие решетки</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Кабины для подсудимых</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Крышки Farro для костровой чаши</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Крышки для дачных колодцев</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Лестница для колодца с площадкой</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Мангалы</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Металлические жалюзи</a></li>
+											<li class="main-menu__item main-menu__item--lvl3"><a href="#" class="main-menu__link main-menu__link--lvl3">Пандусы</a></li>
+										</ul>
+									</li>
+									<li class="main-menu__item main-menu__item--lvl2 main-menu__item--parent">
+										<img src="blocks/main-menu/images/img4.svg" alt="" class="main-menu__icon">
+										<a href="#" class="main-menu__link main-menu__link--lvl2">Видеонаблюдение и системы контроля доступа</a>
+									</li>
+									<li class="main-menu__item main-menu__item--lvl2 main-menu__item--parent">
+										<button class="main-menu__dropdown"></button>
+										<img src="blocks/main-menu/images/img5.svg" alt="" class="main-menu__icon">
+										<a href="#" class="main-menu__link main-menu__link--lvl2">Фурнитура и замки</a>
+									</li>
+									<li class="main-menu__item main-menu__item--lvl2 main-menu__item--parent">
+										<button class="main-menu__dropdown"></button>
+										<img src="blocks/main-menu/images/img6.svg" alt="" class="main-menu__icon">
+										<a href="#" class="main-menu__link main-menu__link--lvl2">Материалы и отделки</a>
+									</li>
+								</ul>
+							</li>
+							<li class="main-menu__item main-menu__item--lvl1 main-menu__item--parent">
+								<button class="main-menu__dropdown"></button>
+								<a href="#" class="main-menu__link main-menu__link--lvl1">Услуги</a>
+								<ul class="main-menu__list main-menu__list--lvl2">
+									<li class="main-menu__item main-menu__item--lvl2"><a href="#" class="main-menu__link main-menu__link--lvl2">Доставка</a></li>
+									<li class="main-menu__item main-menu__item--lvl2"><a href="#" class="main-menu__link main-menu__link--lvl2">Изготовление</a></li>
+									<li class="main-menu__item main-menu__item--lvl2"><a href="#" class="main-menu__link main-menu__link--lvl2">Установка</a></li>
+								</ul>
+							</li>
+							<li class="main-menu__item main-menu__item--lvl1"><a href="#" class="main-menu__link main-menu__link--lvl1">Акции</a></li>
+							<li class="main-menu__item main-menu__item--lvl1"><a href="#" class="main-menu__link main-menu__link--lvl1">О компании</a></li>
+							<li class="main-menu__item main-menu__item--lvl1"><a href="#" class="main-menu__link main-menu__link--lvl1">Галерея</a></li>
+							<li class="main-menu__item main-menu__item--lvl1"><a href="#" class="main-menu__link main-menu__link--lvl1">Оплата</a></li>
+							<li class="main-menu__item main-menu__item--lvl1"><a href="#" class="main-menu__link main-menu__link--lvl1">Гарантия</a></li>
+							<li class="main-menu__item main-menu__item--lvl1"><a href="#" class="main-menu__link main-menu__link--lvl1">Контакты</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="page-nav__search">
+				<div class="search-header">
+					<label>
+						<input type="text" class="search-header__input" placeholder="Поиск">
+					</label>
+					<button class="search-header__button"><svg class="svg-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-loupe"></use></svg></button>
+				</div>
+			</div>
+		</div>
+	</nav>
 	<main class="page-content">
 		<div class="page-container--fluid page-content__slider">
 			<div class="page-slider js-page-slider">
@@ -409,8 +505,6 @@
 						</div>
 					</div>
 				</div>
-				
-				
 			</section>
 			<section class="page-content__section clearfix">
 				<div class="h1 ta-c">Металлические двери от производителя «Дельта-Сталь»</div>
@@ -565,7 +659,7 @@
 			<div class="order-consultation">
 				<div class="page-container--fluid order-consultation__inner">
 					<div class="order-consultation__form-wr">
-						<div class="order-consultation__title">Консультация и замер БЕСПЛАТНО!</div>
+						<div class="h2 order-consultation__title">Консультация и замер БЕСПЛАТНО!</div>
 						<form action="" class="consultation-form">
 							<div class="consultation-form__item">
 								<input type="text" class="consultation-form__field-text" placeholder="Введите ваш телефон">
@@ -661,5 +755,6 @@
 <script src="libs/slick/slick.min.js"></script>
 <script src="blocks/sections-mp/script.js"></script>
 <script src="blocks/page-slider/script.js"></script>
+<script src="blocks/main-menu/script.js"></script>
 </body>
 </html>

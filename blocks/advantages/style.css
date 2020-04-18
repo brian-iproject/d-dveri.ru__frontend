@@ -22,7 +22,7 @@
 				}
 			
 			.advantages__name {
-				font-size: 14px;
+				font-size: var(--font-size--middle);
 				font-weight: 600;
 			}
 

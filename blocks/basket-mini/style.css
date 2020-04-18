@@ -1,5 +1,5 @@
 .basket-mini {
-	font-size: 10px;
+	font-size: var(--font-size--x-small);
 	font-weight: 600;
 	width: 100%;
 }
